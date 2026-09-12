@@ -1,0 +1,390 @@
+{
+  "task_id": "f3a5eda48e7942828fd71cae03e38f81",
+  "id": "f3a5eda48e7942828fd71cae03e38f81",
+  "filename": "41.MP4",
+  "path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/f444fc150b8b4fcc85652b137cb50d71.mp4",
+  "status": "ready",
+  "progress": 100,
+  "pipeline_progress": 100,
+  "stage": "ready",
+  "stage_status": "completed",
+  "stages": {
+    "validate_video": {
+      "stage": "validate_video",
+      "status": "completed",
+      "progress": 8,
+      "error": null,
+      "started_at": "2026-09-12T04:31:45.095505+00:00",
+      "finished_at": "2026-09-12T04:31:45.100570+00:00",
+      "files": {
+        "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/f444fc150b8b4fcc85652b137cb50d71.mp4"
+      }
+    },
+    "detect_ball": {
+      "stage": "detect_ball",
+      "status": "completed",
+      "progress": 32,
+      "error": null,
+      "started_at": "2026-09-12T04:31:45.100730+00:00",
+      "finished_at": "2026-09-12T04:49:56.808232+00:00",
+      "files": {
+        "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/f444fc150b8b4fcc85652b137cb50d71.mp4",
+        "ball_csv": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/tracknet/f444fc150b8b4fcc85652b137cb50d71_ball.csv"
+      }
+    },
+    "track_players": {
+      "stage": "track_players",
+      "status": "completed",
+      "progress": 48,
+      "error": null,
+      "started_at": "2026-09-12T04:49:56.808447+00:00",
+      "finished_at": "2026-09-12T04:49:56.808704+00:00",
+      "files": {
+        "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/f444fc150b8b4fcc85652b137cb50d71.mp4",
+        "ball_csv": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/tracknet/f444fc150b8b4fcc85652b137cb50d71_ball.csv",
+        "calibration": "configured via BADMINTON_COURT_POINTS"
+      }
+    },
+    "export_coordinates": {
+      "stage": "export_coordinates",
+      "status": "completed",
+      "progress": 65,
+      "error": null,
+      "started_at": "2026-09-12T04:49:56.808796+00:00",
+      "finished_at": "2026-09-12T04:51:26.887973+00:00",
+      "files": {
+        "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/f444fc150b8b4fcc85652b137cb50d71.mp4",
+        "ball_csv": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/tracknet/f444fc150b8b4fcc85652b137cb50d71_ball.csv",
+        "calibration": "configured via BADMINTON_COURT_POINTS",
+        "player_csv": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/f444fc150b8b4fcc85652b137cb50d71_coordinates.csv"
+      }
+    },
+    "generate_analysis": {
+      "stage": "generate_analysis",
+      "status": "completed",
+      "progress": 84,
+      "error": null,
+      "started_at": "2026-09-12T04:51:26.888273+00:00",
+      "finished_at": "2026-09-12T04:51:27.459378+00:00",
+      "files": {
+        "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/f444fc150b8b4fcc85652b137cb50d71.mp4",
+        "ball_csv": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/tracknet/f444fc150b8b4fcc85652b137cb50d71_ball.csv",
+        "calibration": "configured via BADMINTON_COURT_POINTS",
+        "player_csv": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/f444fc150b8b4fcc85652b137cb50d71_coordinates.csv",
+        "analysis_json": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/analysis.json",
+        "quality_report": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/quality_report.json",
+        "event_analysis": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/event_analysis.json",
+        "rally_analysis": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/rally_analysis.json",
+        "important_events": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/important_events.json"
+      }
+    },
+    "render_video": {
+      "stage": "render_video",
+      "status": "skipped",
+      "progress": 97,
+      "error": "BADMINTON_RENDER_VIDEO disabled",
+      "started_at": null,
+      "finished_at": "2026-09-12T04:51:27.459723+00:00",
+      "files": {
+        "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/f444fc150b8b4fcc85652b137cb50d71.mp4",
+        "ball_csv": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/tracknet/f444fc150b8b4fcc85652b137cb50d71_ball.csv",
+        "calibration": "configured via BADMINTON_COURT_POINTS",
+        "player_csv": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/f444fc150b8b4fcc85652b137cb50d71_coordinates.csv",
+        "analysis_json": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/analysis.json",
+        "quality_report": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/quality_report.json",
+        "event_analysis": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/event_analysis.json",
+        "rally_analysis": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/rally_analysis.json",
+        "important_events": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/important_events.json"
+      }
+    },
+    "ready": {
+      "stage": "ready",
+      "status": "completed",
+      "progress": 100,
+      "error": null,
+      "started_at": null,
+      "finished_at": "2026-09-12T04:51:27.459852+00:00",
+      "files": {
+        "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/f444fc150b8b4fcc85652b137cb50d71.mp4",
+        "ball_csv": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/tracknet/f444fc150b8b4fcc85652b137cb50d71_ball.csv",
+        "calibration": "configured via BADMINTON_COURT_POINTS",
+        "player_csv": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/f444fc150b8b4fcc85652b137cb50d71_coordinates.csv",
+        "analysis_json": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/analysis.json",
+        "quality_report": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/quality_report.json",
+        "event_analysis": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/event_analysis.json",
+        "rally_analysis": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/rally_analysis.json",
+        "important_events": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/important_events.json"
+      }
+    }
+  },
+  "question": null,
+  "workspace_dir": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace",
+  "analysis_dir": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis",
+  "created_at": "2026-09-12T04:31:43.850008+00:00",
+  "updated_at": "2026-09-12T06:24:25.100171+00:00",
+  "result_path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_7570d37cd68149afa2f782a4728784d3.json",
+  "quality_report_path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/quality_report.json",
+  "quality": "poor",
+  "quality_warnings": [
+    "连续缺失帧过长",
+    "运动员身份发生切换",
+    "帧号不是单调递增"
+  ],
+  "artifacts": {
+    "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/f444fc150b8b4fcc85652b137cb50d71.mp4",
+    "ball_csv": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/tracknet/f444fc150b8b4fcc85652b137cb50d71_ball.csv",
+    "calibration": "configured via BADMINTON_COURT_POINTS",
+    "player_csv": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/f444fc150b8b4fcc85652b137cb50d71_coordinates.csv",
+    "analysis_json": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/analysis.json",
+    "quality_report": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/quality_report.json",
+    "event_analysis": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/event_analysis.json",
+    "rally_analysis": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/rally_analysis.json",
+    "important_events": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/important_events.json",
+    "latest_result": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_7570d37cd68149afa2f782a4728784d3.json"
+  },
+  "error": null,
+  "routing": {
+    "classification": {
+      "question": "分析羽毛球轨迹",
+      "intent": "match_summary",
+      "subject": [],
+      "rally_ids": [],
+      "required_tools": [
+        "get_match_summary"
+      ],
+      "constraints": {
+        "must_use_json_fields_only": true,
+        "must_cite_evidence": true,
+        "allow_technical_inference": false,
+        "allow_outcome_inference": false,
+        "allow_training_advice": false
+      },
+      "confidence": 0.92
+    },
+    "execution_plan": {
+      "steps": [
+        {
+          "tool": "get_match_summary",
+          "params": {}
+        },
+        {
+          "tool": "get_quality_report",
+          "params": {}
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "metric": "ball.anomaly_count",
+        "value": 0,
+        "unit": "frames",
+        "source": "analysis.json.ball_analysis",
+        "description": "[match] 被已有导出标记为异常跳变的帧数",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "ball.direction_changes",
+        "value": 1966,
+        "unit": "count",
+        "source": "analysis.json.ball_analysis",
+        "description": "[match] 方向变化超过 30 度的次数",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "ball.average_speed_mps",
+        "value": 244.26221944148318,
+        "unit": "m/s",
+        "source": "analysis.json.ball_analysis",
+        "description": "[match] 羽毛球二维单应性投影平均速度",
+        "reliability": 0.25,
+        "validation_reason": "速度超过 100 m/s 异常阈值，保留但降低可靠性"
+      },
+      {
+        "metric": "ball.max_speed_mps",
+        "value": 9807.352559065184,
+        "unit": "m/s",
+        "source": "analysis.json.ball_analysis",
+        "description": "[match] 羽毛球二维单应性投影最大速度",
+        "reliability": 0.25,
+        "validation_reason": "速度超过 100 m/s 异常阈值，保留但降低可靠性"
+      },
+      {
+        "metric": "ball.speed_change_count",
+        "value": 5095,
+        "unit": "count",
+        "source": "analysis.json.ball_analysis",
+        "description": "[match] 相邻有效速度增加的次数",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_A.average_speed_mps",
+        "value": 173.3049232300335,
+        "unit": "m/s",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 运动员平均速度",
+        "reliability": 0.25,
+        "validation_reason": "速度超过 100 m/s 异常阈值，保留但降低可靠性"
+      },
+      {
+        "metric": "player_B.average_speed_mps",
+        "value": 169.61966614583633,
+        "unit": "m/s",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 运动员平均速度",
+        "reliability": 0.25,
+        "validation_reason": "速度超过 100 m/s 异常阈值，保留但降低可靠性"
+      },
+      {
+        "metric": "ball.total_frames",
+        "value": 13344,
+        "unit": "frames",
+        "source": "analysis.json.ball_analysis",
+        "description": "[match] 输入逐帧轨迹总帧数",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "ball.trajectory_length_m",
+        "value": 146666.1791474307,
+        "unit": "m",
+        "source": "analysis.json.ball_analysis",
+        "description": "[match] 过滤异常跳变后的二维投影轨迹长度",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "ball.valid_frames",
+        "value": 11284,
+        "unit": "frames",
+        "source": "analysis.json.ball_analysis",
+        "description": "[match] Visibility 有效且坐标非负的羽毛球帧数",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_A.distance_m",
+        "value": 58184.23955909658,
+        "unit": "m",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 运动员累计移动距离",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_A.valid_frames",
+        "value": 10073,
+        "unit": "frames",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 像素坐标非负的运动员帧数",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_B.distance_m",
+        "value": 56161.07146088641,
+        "unit": "m",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 运动员累计移动距离",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_B.valid_frames",
+        "value": 9934,
+        "unit": "frames",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 像素坐标非负的运动员帧数",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "ball.data_notes",
+        "value": [
+          "速度和距离沿用已有二维单应性投影结果，不代表真实三维球速。"
+        ],
+        "unit": "unknown",
+        "source": "analysis.json.ball_analysis",
+        "description": "[match] 羽毛球统计指标",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_A.movement_style",
+        "value": "未推断",
+        "unit": "label",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 仅凭轨迹数据不推断技术风格",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_B.movement_style",
+        "value": "未推断",
+        "unit": "label",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 仅凭轨迹数据不推断技术风格",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      }
+    ],
+    "limitations": [
+      "事件表示轨迹条件，不等同于已确认击球或具体技术动作。",
+      "当前数据没有比分或人工真值，不能推断胜负或检测准确率。"
+    ]
+  },
+  "answer": "**轨迹质量报告（overall_quality=poor）**  \n数据不足，无法判断球员身份切换、帧序列非单调性或球轨迹缺失问题。  \n检测到以下可疑指标：  \n- `ball_missing_gap_long`：未提供具体帧区间或数量，无法确认。  \n- `player_identity_switch`：未提供帧级身份匹配记录，无法确认。  \n- `non_monotonic_frames`：未提供帧序列时间戳或坐标单调性验证，无法确认。  \n\n---\n\n**observed_metric**  \n所有数值均来自分析 JSON 字段，未做技术推断或胜负判断：\n\n### 羽毛球轨迹统计  \n- **方向变化次数**：1966 次（>30°）  \n- **平均速度**：244.26 m/s（二维单应性投影）  \n- **最大速度**：9807.35 m/s（二维单应性投影）  \n- **轨迹总长度**：146,666.18 米（过滤异常跳变后）  \n- **有效帧数**：11,284 帧（Visibility 有效且坐标非负）  \n\n### 球员运动统计  \n- **A 球员**  \n  - 平均速度：173.30 m/s（二维单应性投影）  \n  - 移动距离：58,184.24 米  \n  - 有效帧数：10,073 帧  \n- **B 球员**  \n  - 平均速度：169.62 m/s（二维单应性投影）  \n  - 移动距离：56,161.07 米  \n  - 有效帧数：9,934 帧  \n\n### 数据注释  \n- 速度与距离基于二维单应性投影，不代表真实三维球速。  \n- 球员运动风格未推断（仅凭轨迹数据无法判断）。  \n\n---\n\n**确认限制**  \n检测到相关轨迹统计，但当前数据无法证明其对应具体击球动作。\n- 无比分或人工真值，无法推断胜负或准确率。  \n检测到相关轨迹统计，但当前数据无法证明其对应具体击球动作。\n\n---  \n**质量警告**  \n- `ball.average_speed_mps`、`ball.max_speed_mps`、`player_A.average_speed_mps`、`player_B.average_speed_mps` 均超过 100 m/s 异常阈值，可靠性已降为 0.25。  \n- 超速可能源于投影误差或数据污染，但无真值或比对基准，无法校正或排除。  \n\n---  \n**结论（严格依据 JSON 字段）**  \n- 羽毛球轨迹总长度为 146,666.18 米，方向变化 1966 次，平均速度 244.26 m/s，最大速度 9807.35 m/s。  \n- 球员 A 总移动距离 58,184.24 米，球员 B 总移动距离 56,161.07 米，A 的有效帧数（10,073）多于 B（9,934）。  \n- 数据质量报告标记为 poor，因存在可疑指标（`ball_missing_gap_long`、`player_identity_switch`、`non_monotonic_frames`），但未提供证据字段，无法验证。  \n- 未提供任何可确认击球事件、技术动作或胜负结果。\n\n当前轨迹数据无法证明该结论。",
+  "stage_started_at": null,
+  "stage_finished_at": "2026-09-12T04:51:27.459852+00:00",
+  "stage_error": null,
+  "detector_started": "2026-09-12T04:49:56.808544+00:00",
+  "detector_finished": "2026-09-12T04:49:56.808624+00:00",
+  "latest_result_path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_7570d37cd68149afa2f782a4728784d3.json",
+  "answer_history": [
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_b7eb467b28b1472996693b83f6afff88.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_419a770044a64c88a498395cb886f460.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_9bbf209d214046819e1e3faf4308be7a.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_b1da45caa55244c798d9a3f9862780d4.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_f1fa0a03a7b243e498b1f415d6f23622.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_6076dba9d143407b8231cc296969d437.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_ef9694a8977d44cabc1ef944e0dc95fa.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_3c8dc5a643824278aca16909b5c85153.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_846d2d56c59646d9a77388e14f9992ca.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_868e42a17ae641219ccde14d2fd62216.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_f51e0249a6414b7980ff9ca3a20e5929.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_c38d64693a144bafb05d7f8b0dbe719f.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_27eaff16cae84cda8e07add5ddbb4300.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_cae446cd17f64591ace04bf3825aa5f6.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_20f93cef2e52407d92f7988bb73f621b.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_db3492d6d59947c98161f427b810dcb3.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_2622e29f56dc45929a02f15f04f1cc8c.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_b583abc9e73049db9d5058bd0b0a9882.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_64c9e593c4d2475db083a169c87810a6.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_351b91173d8249a88cd9875a729d69bf.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_a07278aee6174670863101a19537539e.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_8da5631c829c405b8346d5a4f686651a.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_e06179ca25ef45af858e6a0395cde396.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_9eaf0b758ddc45e8986cc324b5c0be9d.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_8be3d41e1d9748189c23a5dbaac24455.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_00a389da06dc4159a34f0d93a6ed0498.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_2ea5d849b2914dc5943c8e9384c2f14f.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_6461b84c1a7a47cba5ee04372298bb48.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_4580c7f657eb42a29c061b7806f67787.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_2cde8aa4d5b149ed95998b803d97226e.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_7e4cbde83c854e64b2c068b0031cd202.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_c8a548be82604cc9a21914f8f14f5c6d.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_9772051b22d641ac925c3fe021b24521.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_52ade685f8334bcd907ee8a45c0cd1b1.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_7def38cb99994802ae80d31187870510.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_ce0192d90ea54f7fa4223dce78ea677e.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_dd81b66af0014c25bb62d201ec6bb00d.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_99773357c8eb4a7582dab936def5f709.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_fed3711eda654a4e9f13b71789bdaafb.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_d213c1f2af644deb9b86349f075b34ee.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_5744fa64ab1347d89e90b5abcfee7684.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_3ec10e2b858447e0b29df95a86a5a813.json",
+    "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/agent_result_7570d37cd68149afa2f782a4728784d3.json"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "task_id": "cab224389d78412aa6e9a8300e688d9e",
+  "id": "cab224389d78412aa6e9a8300e688d9e",
+  "filename": "41.MP4",
+  "path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/62f9ca619a574c3da06e4b0debf3389a.mp4",
+  "status": "failed",
+  "progress": 100,
+  "pipeline_progress": 10,
+  "stage": "detect_ball",
+  "stage_status": "failed",
+  "stages": {
+    "validate_video": {
+      "stage": "validate_video",
+      "status": "completed",
+      "progress": 8,
+      "error": null,
+      "started_at": "2026-09-11T11:51:42.427467+00:00",
+      "finished_at": "2026-09-11T11:51:42.432347+00:00",
+      "files": {
+        "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/62f9ca619a574c3da06e4b0debf3389a.mp4"
+      }
+    },
+    "detect_ball": {
+      "stage": "detect_ball",
+      "status": "failed",
+      "progress": 10,
+      "error": "命令失败(1): /home/china/Desktop/badminton-trajectory-analysis/.venv/bin/python /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py --video_file /home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/62f9ca619a574c3da06e4b0debf3389a.mp4 --tracknet_file /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/ckpts/TrackNet_best.pt --save_dir /home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/cab224389d78412aa6e9a8300e688d9e/workspace/tracknet --device cuda --large_video --batch_size 32\nstdout: Generate median image...\nMedian image generated.\nVideo length: 13344\n\nstderr: \n155it [06:30,  2.54s/it]\n156it [06:32,  2.54s/it]\n157it [06:35,  2.54s/it]\n158it [06:37,  2.53s/it]\n159it [06:40,  2.54s/it]\n160it [06:43,  2.53s/it]\n161it [06:45,  2.53s/it]\n162it [06:48,  2.53s/it]\n163it [06:50,  2.53s/it]\n164it [06:53,  2.53s/it]\n165it [06:55,  2.52s/it]\n166it [06:58,  2.53s/it]\n167it [07:00,  2.54s/it]\n168it [07:03,  2.54s/it]\n169it [07:05,  2.54s/it]\n170it [07:08,  2.56s/it]\n171it [07:11,  2.56s/it]\n172it [07:13,  2.55s/it]\n173it [07:16,  2.56s/it]\n174it [07:18,  2.57s/it]\n175it [07:21,  2.58s/it]\n176it [07:23,  2.55s/it]\n177it [07:26,  2.53s/it]\n178it [07:28,  2.52s/it]\n179it [07:31,  2.51s/it]\n180it [07:33,  2.50s/it]\n181it [07:36,  2.50s/it]\n182it [07:38,  2.50s/it]\n183it [07:41,  2.48s/it]\n184it [07:43,  2.49s/it]\n185it [07:46,  2.50s/it]\n186it [07:48,  2.50s/it]\n187it [07:51,  2.50s/it]\n188it [07:53,  2.49s/it]\n189it [07:56,  2.48s/it]\n190it [07:58,  2.49s/it]\n191it [08:01,  2.49s/it]\n192it [08:03,  2.49s/it]\n193it [08:06,  2.49s/it]\n194it [08:08,  2.50s/it]\n195it [08:11,  2.52s/it]\n196it [08:13,  2.51s/it]\n197it [08:16,  2.51s/it]\n198it [08:18,  2.50s/it]\n199it [08:21,  2.49s/it]\n200it [08:23,  2.49s/it]\n201it [08:26,  2.48s/it]\n202it [08:28,  2.48s/it]\n203it [08:31,  2.48s/it]\n204it [08:33,  2.48s/it]\n205it [08:36,  2.48s/it]\n206it [08:38,  2.48s/it]\n207it [08:40,  2.47s/it]\n208it [08:43,  2.47s/it]\n209it [08:45,  2.46s/it]\n210it [08:48,  2.46s/it]\n211it [08:50,  2.46s/it]\n212it [08:53,  2.46s/it]\n213it [08:55,  2.46s/it]\n214it [08:58,  2.46s/it]\n215it [09:00,  2.46s/it]\n216it [09:03,  2.45s/it]\n217it [09:05,  2.45s/it]\n218it [09:07,  2.46s/it]\n219it [09:10,  2.45s/it]\n220it [09:12,  2.46s/it]\n221it [09:15,  2.46s/it]\n222it [09:17,  2.46s/it]\n223it [09:20,  2.47s/it]\n224it [09:22,  2.46s/it]\n225it [09:25,  2.47s/it]\n226it [09:27,  2.47s/it]\n227it [09:30,  2.46s/it]\n228it [09:32,  2.46s/it]\n229it [09:35,  2.46s/it]\n230it [09:37,  2.47s/it]\n231it [09:39,  2.46s/it]\n232it [09:42,  2.46s/it]\n233it [09:44,  2.46s/it]\n234it [09:47,  2.45s/it]\n235it [09:49,  2.46s/it]\n236it [09:52,  2.47s/it]\n237it [09:54,  2.47s/it]\n238it [09:57,  2.47s/it]\n239it [09:59,  2.48s/it]\n240it [10:02,  2.49s/it]\n241it [10:04,  2.48s/it]\n242it [10:07,  2.48s/it]\n243it [10:09,  2.47s/it]\n244it [10:12,  2.47s/it]\n245it [10:14,  2.47s/it]\n246it [10:17,  2.47s/it]\n247it [10:19,  2.47s/it]\n248it [10:22,  2.48s/it]\n249it [10:24,  2.48s/it]\n250it [10:27,  2.48s/it]\n251it [10:29,  2.48s/it]\n252it [10:32,  2.50s/it]\n253it [10:34,  2.48s/it]\n254it [10:36,  2.48s/it]\n255it [10:39,  2.47s/it]\n256it [10:41,  2.48s/it]\n257it [10:44,  2.48s/it]\n258it [10:46,  2.48s/it]\n259it [10:49,  2.48s/it]\n260it [10:51,  2.50s/it]\n261it [10:54,  2.49s/it]\n262it [10:56,  2.48s/it]\n263it [10:59,  2.49s/it]\n264it [11:01,  2.47s/it]\n265it [11:04,  2.48s/it]\n266it [11:06,  2.49s/it]\n267it [11:09,  2.48s/it]\n268it [11:11,  2.49s/it]\n269it [11:14,  2.52s/it]\n270it [11:16,  2.51s/it]\n271it [11:19,  2.51s/it]\n272it [11:21,  2.50s/it]\n273it [11:24,  2.51s/it]\n274it [11:26,  2.49s/it]\n275it [11:29,  2.48s/it]\n276it [11:31,  2.49s/it]\n277it [11:34,  2.49s/it]\n278it [11:36,  2.49s/it]\n279it [11:39,  2.48s/it]\n280it [11:41,  2.48s/it]\n281it [11:44,  2.49s/it]\n282it [11:46,  2.49s/it]\n283it [11:49,  2.50s/it]\n284it [11:51,  2.49s/it]\n285it [11:54,  2.48s/it]\n286it [11:56,  2.47s/it]\n287it [11:59,  2.49s/it]\n287it [15:54:25, 199.53s/it]\nTraceback (most recent call last):\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py\", line 181, in <module>\n    x = x.float().to(device)\n        ^^^^^^^^^^^^^^^^^^^^\ntorch.AcceleratorError: CUDA error: unspecified launch failure\nSearch for `cudaErrorLaunchFailure' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n\n",
+      "started_at": "2026-09-11T11:51:42.432498+00:00",
+      "finished_at": "2026-09-12T03:47:13.045396+00:00",
+      "files": {
+        "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/62f9ca619a574c3da06e4b0debf3389a.mp4"
+      }
+    },
+    "track_players": {
+      "stage": "track_players",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "export_coordinates": {
+      "stage": "export_coordinates",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "generate_analysis": {
+      "stage": "generate_analysis",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "render_video": {
+      "stage": "render_video",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "ready": {
+      "stage": "ready",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    }
+  },
+  "question": null,
+  "workspace_dir": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/cab224389d78412aa6e9a8300e688d9e/workspace",
+  "analysis_dir": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/cab224389d78412aa6e9a8300e688d9e/workspace/analysis",
+  "created_at": "2026-09-11T11:51:41.796908+00:00",
+  "updated_at": "2026-09-12T03:47:13.060755+00:00",
+  "result_path": null,
+  "quality_report_path": null,
+  "quality": null,
+  "quality_warnings": [],
+  "artifacts": {
+    "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/62f9ca619a574c3da06e4b0debf3389a.mp4"
+  },
+  "error": "命令失败(1): /home/china/Desktop/badminton-trajectory-analysis/.venv/bin/python /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py --video_file /home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/62f9ca619a574c3da06e4b0debf3389a.mp4 --tracknet_file /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/ckpts/TrackNet_best.pt --save_dir /home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/cab224389d78412aa6e9a8300e688d9e/workspace/tracknet --device cuda --large_video --batch_size 32\nstdout: Generate median image...\nMedian image generated.\nVideo length: 13344\n\nstderr: \n155it [06:30,  2.54s/it]\n156it [06:32,  2.54s/it]\n157it [06:35,  2.54s/it]\n158it [06:37,  2.53s/it]\n159it [06:40,  2.54s/it]\n160it [06:43,  2.53s/it]\n161it [06:45,  2.53s/it]\n162it [06:48,  2.53s/it]\n163it [06:50,  2.53s/it]\n164it [06:53,  2.53s/it]\n165it [06:55,  2.52s/it]\n166it [06:58,  2.53s/it]\n167it [07:00,  2.54s/it]\n168it [07:03,  2.54s/it]\n169it [07:05,  2.54s/it]\n170it [07:08,  2.56s/it]\n171it [07:11,  2.56s/it]\n172it [07:13,  2.55s/it]\n173it [07:16,  2.56s/it]\n174it [07:18,  2.57s/it]\n175it [07:21,  2.58s/it]\n176it [07:23,  2.55s/it]\n177it [07:26,  2.53s/it]\n178it [07:28,  2.52s/it]\n179it [07:31,  2.51s/it]\n180it [07:33,  2.50s/it]\n181it [07:36,  2.50s/it]\n182it [07:38,  2.50s/it]\n183it [07:41,  2.48s/it]\n184it [07:43,  2.49s/it]\n185it [07:46,  2.50s/it]\n186it [07:48,  2.50s/it]\n187it [07:51,  2.50s/it]\n188it [07:53,  2.49s/it]\n189it [07:56,  2.48s/it]\n190it [07:58,  2.49s/it]\n191it [08:01,  2.49s/it]\n192it [08:03,  2.49s/it]\n193it [08:06,  2.49s/it]\n194it [08:08,  2.50s/it]\n195it [08:11,  2.52s/it]\n196it [08:13,  2.51s/it]\n197it [08:16,  2.51s/it]\n198it [08:18,  2.50s/it]\n199it [08:21,  2.49s/it]\n200it [08:23,  2.49s/it]\n201it [08:26,  2.48s/it]\n202it [08:28,  2.48s/it]\n203it [08:31,  2.48s/it]\n204it [08:33,  2.48s/it]\n205it [08:36,  2.48s/it]\n206it [08:38,  2.48s/it]\n207it [08:40,  2.47s/it]\n208it [08:43,  2.47s/it]\n209it [08:45,  2.46s/it]\n210it [08:48,  2.46s/it]\n211it [08:50,  2.46s/it]\n212it [08:53,  2.46s/it]\n213it [08:55,  2.46s/it]\n214it [08:58,  2.46s/it]\n215it [09:00,  2.46s/it]\n216it [09:03,  2.45s/it]\n217it [09:05,  2.45s/it]\n218it [09:07,  2.46s/it]\n219it [09:10,  2.45s/it]\n220it [09:12,  2.46s/it]\n221it [09:15,  2.46s/it]\n222it [09:17,  2.46s/it]\n223it [09:20,  2.47s/it]\n224it [09:22,  2.46s/it]\n225it [09:25,  2.47s/it]\n226it [09:27,  2.47s/it]\n227it [09:30,  2.46s/it]\n228it [09:32,  2.46s/it]\n229it [09:35,  2.46s/it]\n230it [09:37,  2.47s/it]\n231it [09:39,  2.46s/it]\n232it [09:42,  2.46s/it]\n233it [09:44,  2.46s/it]\n234it [09:47,  2.45s/it]\n235it [09:49,  2.46s/it]\n236it [09:52,  2.47s/it]\n237it [09:54,  2.47s/it]\n238it [09:57,  2.47s/it]\n239it [09:59,  2.48s/it]\n240it [10:02,  2.49s/it]\n241it [10:04,  2.48s/it]\n242it [10:07,  2.48s/it]\n243it [10:09,  2.47s/it]\n244it [10:12,  2.47s/it]\n245it [10:14,  2.47s/it]\n246it [10:17,  2.47s/it]\n247it [10:19,  2.47s/it]\n248it [10:22,  2.48s/it]\n249it [10:24,  2.48s/it]\n250it [10:27,  2.48s/it]\n251it [10:29,  2.48s/it]\n252it [10:32,  2.50s/it]\n253it [10:34,  2.48s/it]\n254it [10:36,  2.48s/it]\n255it [10:39,  2.47s/it]\n256it [10:41,  2.48s/it]\n257it [10:44,  2.48s/it]\n258it [10:46,  2.48s/it]\n259it [10:49,  2.48s/it]\n260it [10:51,  2.50s/it]\n261it [10:54,  2.49s/it]\n262it [10:56,  2.48s/it]\n263it [10:59,  2.49s/it]\n264it [11:01,  2.47s/it]\n265it [11:04,  2.48s/it]\n266it [11:06,  2.49s/it]\n267it [11:09,  2.48s/it]\n268it [11:11,  2.49s/it]\n269it [11:14,  2.52s/it]\n270it [11:16,  2.51s/it]\n271it [11:19,  2.51s/it]\n272it [11:21,  2.50s/it]\n273it [11:24,  2.51s/it]\n274it [11:26,  2.49s/it]\n275it [11:29,  2.48s/it]\n276it [11:31,  2.49s/it]\n277it [11:34,  2.49s/it]\n278it [11:36,  2.49s/it]\n279it [11:39,  2.48s/it]\n280it [11:41,  2.48s/it]\n281it [11:44,  2.49s/it]\n282it [11:46,  2.49s/it]\n283it [11:49,  2.50s/it]\n284it [11:51,  2.49s/it]\n285it [11:54,  2.48s/it]\n286it [11:56,  2.47s/it]\n287it [11:59,  2.49s/it]\n287it [15:54:25, 199.53s/it]\nTraceback (most recent call last):\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py\", line 181, in <module>\n    x = x.float().to(device)\n        ^^^^^^^^^^^^^^^^^^^^\ntorch.AcceleratorError: CUDA error: unspecified launch failure\nSearch for `cudaErrorLaunchFailure' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n\n",
+  "routing": null,
+  "answer": null,
+  "stage_started_at": "2026-09-11T11:51:42.432498+00:00",
+  "stage_finished_at": "2026-09-12T03:47:13.045396+00:00",
+  "stage_error": "命令失败(1): /home/china/Desktop/badminton-trajectory-analysis/.venv/bin/python /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py --video_file /home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/62f9ca619a574c3da06e4b0debf3389a.mp4 --tracknet_file /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/ckpts/TrackNet_best.pt --save_dir /home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/cab224389d78412aa6e9a8300e688d9e/workspace/tracknet --device cuda --large_video --batch_size 32\nstdout: Generate median image...\nMedian image generated.\nVideo length: 13344\n\nstderr: \n155it [06:30,  2.54s/it]\n156it [06:32,  2.54s/it]\n157it [06:35,  2.54s/it]\n158it [06:37,  2.53s/it]\n159it [06:40,  2.54s/it]\n160it [06:43,  2.53s/it]\n161it [06:45,  2.53s/it]\n162it [06:48,  2.53s/it]\n163it [06:50,  2.53s/it]\n164it [06:53,  2.53s/it]\n165it [06:55,  2.52s/it]\n166it [06:58,  2.53s/it]\n167it [07:00,  2.54s/it]\n168it [07:03,  2.54s/it]\n169it [07:05,  2.54s/it]\n170it [07:08,  2.56s/it]\n171it [07:11,  2.56s/it]\n172it [07:13,  2.55s/it]\n173it [07:16,  2.56s/it]\n174it [07:18,  2.57s/it]\n175it [07:21,  2.58s/it]\n176it [07:23,  2.55s/it]\n177it [07:26,  2.53s/it]\n178it [07:28,  2.52s/it]\n179it [07:31,  2.51s/it]\n180it [07:33,  2.50s/it]\n181it [07:36,  2.50s/it]\n182it [07:38,  2.50s/it]\n183it [07:41,  2.48s/it]\n184it [07:43,  2.49s/it]\n185it [07:46,  2.50s/it]\n186it [07:48,  2.50s/it]\n187it [07:51,  2.50s/it]\n188it [07:53,  2.49s/it]\n189it [07:56,  2.48s/it]\n190it [07:58,  2.49s/it]\n191it [08:01,  2.49s/it]\n192it [08:03,  2.49s/it]\n193it [08:06,  2.49s/it]\n194it [08:08,  2.50s/it]\n195it [08:11,  2.52s/it]\n196it [08:13,  2.51s/it]\n197it [08:16,  2.51s/it]\n198it [08:18,  2.50s/it]\n199it [08:21,  2.49s/it]\n200it [08:23,  2.49s/it]\n201it [08:26,  2.48s/it]\n202it [08:28,  2.48s/it]\n203it [08:31,  2.48s/it]\n204it [08:33,  2.48s/it]\n205it [08:36,  2.48s/it]\n206it [08:38,  2.48s/it]\n207it [08:40,  2.47s/it]\n208it [08:43,  2.47s/it]\n209it [08:45,  2.46s/it]\n210it [08:48,  2.46s/it]\n211it [08:50,  2.46s/it]\n212it [08:53,  2.46s/it]\n213it [08:55,  2.46s/it]\n214it [08:58,  2.46s/it]\n215it [09:00,  2.46s/it]\n216it [09:03,  2.45s/it]\n217it [09:05,  2.45s/it]\n218it [09:07,  2.46s/it]\n219it [09:10,  2.45s/it]\n220it [09:12,  2.46s/it]\n221it [09:15,  2.46s/it]\n222it [09:17,  2.46s/it]\n223it [09:20,  2.47s/it]\n224it [09:22,  2.46s/it]\n225it [09:25,  2.47s/it]\n226it [09:27,  2.47s/it]\n227it [09:30,  2.46s/it]\n228it [09:32,  2.46s/it]\n229it [09:35,  2.46s/it]\n230it [09:37,  2.47s/it]\n231it [09:39,  2.46s/it]\n232it [09:42,  2.46s/it]\n233it [09:44,  2.46s/it]\n234it [09:47,  2.45s/it]\n235it [09:49,  2.46s/it]\n236it [09:52,  2.47s/it]\n237it [09:54,  2.47s/it]\n238it [09:57,  2.47s/it]\n239it [09:59,  2.48s/it]\n240it [10:02,  2.49s/it]\n241it [10:04,  2.48s/it]\n242it [10:07,  2.48s/it]\n243it [10:09,  2.47s/it]\n244it [10:12,  2.47s/it]\n245it [10:14,  2.47s/it]\n246it [10:17,  2.47s/it]\n247it [10:19,  2.47s/it]\n248it [10:22,  2.48s/it]\n249it [10:24,  2.48s/it]\n250it [10:27,  2.48s/it]\n251it [10:29,  2.48s/it]\n252it [10:32,  2.50s/it]\n253it [10:34,  2.48s/it]\n254it [10:36,  2.48s/it]\n255it [10:39,  2.47s/it]\n256it [10:41,  2.48s/it]\n257it [10:44,  2.48s/it]\n258it [10:46,  2.48s/it]\n259it [10:49,  2.48s/it]\n260it [10:51,  2.50s/it]\n261it [10:54,  2.49s/it]\n262it [10:56,  2.48s/it]\n263it [10:59,  2.49s/it]\n264it [11:01,  2.47s/it]\n265it [11:04,  2.48s/it]\n266it [11:06,  2.49s/it]\n267it [11:09,  2.48s/it]\n268it [11:11,  2.49s/it]\n269it [11:14,  2.52s/it]\n270it [11:16,  2.51s/it]\n271it [11:19,  2.51s/it]\n272it [11:21,  2.50s/it]\n273it [11:24,  2.51s/it]\n274it [11:26,  2.49s/it]\n275it [11:29,  2.48s/it]\n276it [11:31,  2.49s/it]\n277it [11:34,  2.49s/it]\n278it [11:36,  2.49s/it]\n279it [11:39,  2.48s/it]\n280it [11:41,  2.48s/it]\n281it [11:44,  2.49s/it]\n282it [11:46,  2.49s/it]\n283it [11:49,  2.50s/it]\n284it [11:51,  2.49s/it]\n285it [11:54,  2.48s/it]\n286it [11:56,  2.47s/it]\n287it [11:59,  2.49s/it]\n287it [15:54:25, 199.53s/it]\nTraceback (most recent call last):\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py\", line 181, in <module>\n    x = x.float().to(device)\n        ^^^^^^^^^^^^^^^^^^^^\ntorch.AcceleratorError: CUDA error: unspecified launch failure\nSearch for `cudaErrorLaunchFailure' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n\n",
+  "retryable": true
+}

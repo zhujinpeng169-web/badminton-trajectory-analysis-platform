@@ -1,0 +1,17 @@
+{
+  "frames": 13344,
+  "fps": 20.999984631446726,
+  "duration_sec": 635.4290364583333,
+  "ball_valid_frames": 11284,
+  "ball_coverage_pct": 84.56235011990408,
+  "ball_distance_m_filtered": 12072.339265365154,
+  "ball_mean_speed_mps_filtered": 29.960234139005454,
+  "ball_max_speed_mps_filtered": 99.76045126458861,
+  "ball_jump_frames": 3582,
+  "ball_direction_changes_gt30deg": 2148,
+  "ball_missing_frames": 2060,
+  "notes": [
+    "Ball speed is a 2D homography projection.",
+    "Jump frames are retained and flagged in the CSV."
+  ]
+}

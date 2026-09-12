@@ -1,0 +1,99 @@
+{
+  "task_id": "555fb1ad0ad64801b1665f090705a844",
+  "id": "555fb1ad0ad64801b1665f090705a844",
+  "filename": "41.MP4",
+  "path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/2274702a993145c0b27e9cc9501cf8c0.mp4",
+  "status": "failed",
+  "progress": 100,
+  "pipeline_progress": 10,
+  "stage": "detect_ball",
+  "stage_status": "failed",
+  "stages": {
+    "validate_video": {
+      "stage": "validate_video",
+      "status": "completed",
+      "progress": 8,
+      "error": null,
+      "started_at": "2026-09-12T04:03:02.314998+00:00",
+      "finished_at": "2026-09-12T04:03:02.319971+00:00",
+      "files": {
+        "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/2274702a993145c0b27e9cc9501cf8c0.mp4"
+      }
+    },
+    "detect_ball": {
+      "stage": "detect_ball",
+      "status": "failed",
+      "progress": 10,
+      "error": "命令失败(-2): /home/china/Desktop/badminton-trajectory-analysis/.venv/bin/python /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py --video_file /home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/2274702a993145c0b27e9cc9501cf8c0.mp4 --tracknet_file /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/ckpts/TrackNet_best.pt --save_dir /home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/555fb1ad0ad64801b1665f090705a844/workspace/tracknet --device cuda --large_video --batch_size 32\nstdout: Generate median image...\nMedian image generated.\nVideo length: 13344\n\nstderr: :56,  2.55s/it]\n249it [10:59,  2.54s/it]\n250it [11:01,  2.55s/it]\n251it [11:04,  2.55s/it]\n252it [11:06,  2.55s/it]\n253it [11:09,  2.55s/it]\n254it [11:11,  2.55s/it]\n255it [11:14,  2.54s/it]\n256it [11:16,  2.54s/it]\n257it [11:19,  2.54s/it]\n258it [11:21,  2.54s/it]\n259it [11:24,  2.53s/it]\n260it [11:27,  2.55s/it]\n261it [11:29,  2.56s/it]\n262it [11:32,  2.56s/it]\n263it [11:34,  2.57s/it]\n264it [11:37,  2.58s/it]\n265it [11:40,  2.59s/it]\n266it [11:42,  2.60s/it]\n267it [11:45,  2.59s/it]\n268it [11:47,  2.59s/it]\n269it [11:50,  2.58s/it]\n270it [11:52,  2.59s/it]\n271it [11:55,  2.58s/it]\n272it [11:58,  2.59s/it]\n273it [12:00,  2.55s/it]\n274it [12:03,  2.54s/it]\n275it [12:05,  2.52s/it]\n276it [12:08,  2.52s/it]\n277it [12:10,  2.51s/it]\n278it [12:13,  2.51s/it]\n279it [12:15,  2.50s/it]\n280it [12:18,  2.49s/it]\n281it [12:20,  2.49s/it]\n282it [12:23,  2.48s/it]\n283it [12:25,  2.49s/it]\n284it [12:28,  2.50s/it]\n285it [12:30,  2.50s/it]\n286it [12:32,  2.49s/it]\n287it [12:35,  2.49s/it]\n288it [12:37,  2.49s/it]\n289it [12:40,  2.49s/it]\n290it [12:42,  2.50s/it]\n291it [12:45,  2.49s/it]\n292it [12:47,  2.50s/it]\n293it [12:50,  2.49s/it]\n294it [12:52,  2.50s/it]\n295it [12:55,  2.50s/it]\n296it [12:57,  2.51s/it]\n297it [13:00,  2.50s/it]\n298it [13:02,  2.50s/it]\n299it [13:05,  2.50s/it]\n300it [13:07,  2.50s/it]\n301it [13:10,  2.50s/it]\n302it [13:12,  2.49s/it]\n303it [13:15,  2.49s/it]\n304it [13:17,  2.49s/it]\n305it [13:20,  2.49s/it]\n306it [13:22,  2.49s/it]\n307it [13:25,  2.49s/it]\n308it [13:27,  2.50s/it]\n309it [13:30,  2.49s/it]\n310it [13:32,  2.49s/it]\n311it [13:35,  2.49s/it]\n312it [13:37,  2.50s/it]\n313it [13:40,  2.49s/it]\n314it [13:42,  2.50s/it]\n315it [13:45,  2.49s/it]\n316it [13:47,  2.49s/it]\n317it [13:50,  2.48s/it]\n318it [13:52,  2.49s/it]\n319it [13:55,  2.48s/it]\n320it [13:57,  2.51s/it]\n321it [14:00,  2.50s/it]\n322it [14:02,  2.49s/it]\n323it [14:05,  2.48s/it]\n324it [14:07,  2.49s/it]\n325it [14:10,  2.49s/it]\n326it [14:12,  2.50s/it]\n327it [14:15,  2.49s/it]\n328it [14:17,  2.49s/it]\n329it [14:20,  2.49s/it]\n330it [14:22,  2.50s/it]\n331it [14:25,  2.49s/it]\n332it [14:27,  2.49s/it]\n333it [14:30,  2.49s/it]\n334it [14:32,  2.48s/it]\n335it [14:35,  2.48s/it]\n336it [14:37,  2.49s/it]\n337it [14:40,  2.49s/it]\n338it [14:42,  2.50s/it]\n339it [14:45,  2.49s/it]\n340it [14:47,  2.49s/it]\n341it [14:50,  2.51s/it]\n342it [14:52,  2.53s/it]\n343it [14:55,  2.53s/it]\n344it [14:57,  2.54s/it]\n345it [15:00,  2.52s/it]\n345it [15:01,  2.61s/it]\nTraceback (most recent call last):\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py\", line 180, in <module>\n    for step, (i, x) in enumerate(tqdm(data_loader)):\n  File \"/home/china/Desktop/badminton-trajectory-analysis/.venv/lib/python3.12/site-packages/tqdm/std.py\", line 1187, in __iter__\n    for obj in iterable:\n  File \"/home/china/Desktop/badminton-trajectory-analysis/.venv/lib/python3.12/site-packages/torch/utils/data/dataloader.py\", line 732, in __next__\n    data = self._next_data()\n           ^^^^^^^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/.venv/lib/python3.12/site-packages/torch/utils/data/dataloader.py\", line 788, in _next_data\n    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/.venv/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py\", line 33, in fetch\n    data.append(next(self.dataset_iter))\n                ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/dataset.py\", line 739, in __iter__\n    frames = self.__process__(np.array(frame_list)[..., ::-1])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/dataset.py\", line 805, in __process__\n    frames = np.concatenate((frames, img), axis=0)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyboardInterrupt\n",
+      "started_at": "2026-09-12T04:03:02.320130+00:00",
+      "finished_at": "2026-09-12T04:19:07.547670+00:00",
+      "files": {
+        "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/2274702a993145c0b27e9cc9501cf8c0.mp4"
+      }
+    },
+    "track_players": {
+      "stage": "track_players",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "export_coordinates": {
+      "stage": "export_coordinates",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "generate_analysis": {
+      "stage": "generate_analysis",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "render_video": {
+      "stage": "render_video",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "ready": {
+      "stage": "ready",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    }
+  },
+  "question": null,
+  "workspace_dir": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/555fb1ad0ad64801b1665f090705a844/workspace",
+  "analysis_dir": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/555fb1ad0ad64801b1665f090705a844/workspace/analysis",
+  "created_at": "2026-09-12T04:03:01.077074+00:00",
+  "updated_at": "2026-09-12T04:19:07.547936+00:00",
+  "result_path": null,
+  "quality_report_path": null,
+  "quality": null,
+  "quality_warnings": [],
+  "artifacts": {
+    "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/2274702a993145c0b27e9cc9501cf8c0.mp4"
+  },
+  "error": "命令失败(-2): /home/china/Desktop/badminton-trajectory-analysis/.venv/bin/python /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py --video_file /home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/2274702a993145c0b27e9cc9501cf8c0.mp4 --tracknet_file /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/ckpts/TrackNet_best.pt --save_dir /home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/555fb1ad0ad64801b1665f090705a844/workspace/tracknet --device cuda --large_video --batch_size 32\nstdout: Generate median image...\nMedian image generated.\nVideo length: 13344\n\nstderr: :56,  2.55s/it]\n249it [10:59,  2.54s/it]\n250it [11:01,  2.55s/it]\n251it [11:04,  2.55s/it]\n252it [11:06,  2.55s/it]\n253it [11:09,  2.55s/it]\n254it [11:11,  2.55s/it]\n255it [11:14,  2.54s/it]\n256it [11:16,  2.54s/it]\n257it [11:19,  2.54s/it]\n258it [11:21,  2.54s/it]\n259it [11:24,  2.53s/it]\n260it [11:27,  2.55s/it]\n261it [11:29,  2.56s/it]\n262it [11:32,  2.56s/it]\n263it [11:34,  2.57s/it]\n264it [11:37,  2.58s/it]\n265it [11:40,  2.59s/it]\n266it [11:42,  2.60s/it]\n267it [11:45,  2.59s/it]\n268it [11:47,  2.59s/it]\n269it [11:50,  2.58s/it]\n270it [11:52,  2.59s/it]\n271it [11:55,  2.58s/it]\n272it [11:58,  2.59s/it]\n273it [12:00,  2.55s/it]\n274it [12:03,  2.54s/it]\n275it [12:05,  2.52s/it]\n276it [12:08,  2.52s/it]\n277it [12:10,  2.51s/it]\n278it [12:13,  2.51s/it]\n279it [12:15,  2.50s/it]\n280it [12:18,  2.49s/it]\n281it [12:20,  2.49s/it]\n282it [12:23,  2.48s/it]\n283it [12:25,  2.49s/it]\n284it [12:28,  2.50s/it]\n285it [12:30,  2.50s/it]\n286it [12:32,  2.49s/it]\n287it [12:35,  2.49s/it]\n288it [12:37,  2.49s/it]\n289it [12:40,  2.49s/it]\n290it [12:42,  2.50s/it]\n291it [12:45,  2.49s/it]\n292it [12:47,  2.50s/it]\n293it [12:50,  2.49s/it]\n294it [12:52,  2.50s/it]\n295it [12:55,  2.50s/it]\n296it [12:57,  2.51s/it]\n297it [13:00,  2.50s/it]\n298it [13:02,  2.50s/it]\n299it [13:05,  2.50s/it]\n300it [13:07,  2.50s/it]\n301it [13:10,  2.50s/it]\n302it [13:12,  2.49s/it]\n303it [13:15,  2.49s/it]\n304it [13:17,  2.49s/it]\n305it [13:20,  2.49s/it]\n306it [13:22,  2.49s/it]\n307it [13:25,  2.49s/it]\n308it [13:27,  2.50s/it]\n309it [13:30,  2.49s/it]\n310it [13:32,  2.49s/it]\n311it [13:35,  2.49s/it]\n312it [13:37,  2.50s/it]\n313it [13:40,  2.49s/it]\n314it [13:42,  2.50s/it]\n315it [13:45,  2.49s/it]\n316it [13:47,  2.49s/it]\n317it [13:50,  2.48s/it]\n318it [13:52,  2.49s/it]\n319it [13:55,  2.48s/it]\n320it [13:57,  2.51s/it]\n321it [14:00,  2.50s/it]\n322it [14:02,  2.49s/it]\n323it [14:05,  2.48s/it]\n324it [14:07,  2.49s/it]\n325it [14:10,  2.49s/it]\n326it [14:12,  2.50s/it]\n327it [14:15,  2.49s/it]\n328it [14:17,  2.49s/it]\n329it [14:20,  2.49s/it]\n330it [14:22,  2.50s/it]\n331it [14:25,  2.49s/it]\n332it [14:27,  2.49s/it]\n333it [14:30,  2.49s/it]\n334it [14:32,  2.48s/it]\n335it [14:35,  2.48s/it]\n336it [14:37,  2.49s/it]\n337it [14:40,  2.49s/it]\n338it [14:42,  2.50s/it]\n339it [14:45,  2.49s/it]\n340it [14:47,  2.49s/it]\n341it [14:50,  2.51s/it]\n342it [14:52,  2.53s/it]\n343it [14:55,  2.53s/it]\n344it [14:57,  2.54s/it]\n345it [15:00,  2.52s/it]\n345it [15:01,  2.61s/it]\nTraceback (most recent call last):\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py\", line 180, in <module>\n    for step, (i, x) in enumerate(tqdm(data_loader)):\n  File \"/home/china/Desktop/badminton-trajectory-analysis/.venv/lib/python3.12/site-packages/tqdm/std.py\", line 1187, in __iter__\n    for obj in iterable:\n  File \"/home/china/Desktop/badminton-trajectory-analysis/.venv/lib/python3.12/site-packages/torch/utils/data/dataloader.py\", line 732, in __next__\n    data = self._next_data()\n           ^^^^^^^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/.venv/lib/python3.12/site-packages/torch/utils/data/dataloader.py\", line 788, in _next_data\n    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/.venv/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py\", line 33, in fetch\n    data.append(next(self.dataset_iter))\n                ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/dataset.py\", line 739, in __iter__\n    frames = self.__process__(np.array(frame_list)[..., ::-1])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/dataset.py\", line 805, in __process__\n    frames = np.concatenate((frames, img), axis=0)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyboardInterrupt\n",
+  "routing": null,
+  "answer": null,
+  "stage_started_at": "2026-09-12T04:03:02.320130+00:00",
+  "stage_finished_at": "2026-09-12T04:19:07.547670+00:00",
+  "stage_error": "命令失败(-2): /home/china/Desktop/badminton-trajectory-analysis/.venv/bin/python /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py --video_file /home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/2274702a993145c0b27e9cc9501cf8c0.mp4 --tracknet_file /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/ckpts/TrackNet_best.pt --save_dir /home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/555fb1ad0ad64801b1665f090705a844/workspace/tracknet --device cuda --large_video --batch_size 32\nstdout: Generate median image...\nMedian image generated.\nVideo length: 13344\n\nstderr: :56,  2.55s/it]\n249it [10:59,  2.54s/it]\n250it [11:01,  2.55s/it]\n251it [11:04,  2.55s/it]\n252it [11:06,  2.55s/it]\n253it [11:09,  2.55s/it]\n254it [11:11,  2.55s/it]\n255it [11:14,  2.54s/it]\n256it [11:16,  2.54s/it]\n257it [11:19,  2.54s/it]\n258it [11:21,  2.54s/it]\n259it [11:24,  2.53s/it]\n260it [11:27,  2.55s/it]\n261it [11:29,  2.56s/it]\n262it [11:32,  2.56s/it]\n263it [11:34,  2.57s/it]\n264it [11:37,  2.58s/it]\n265it [11:40,  2.59s/it]\n266it [11:42,  2.60s/it]\n267it [11:45,  2.59s/it]\n268it [11:47,  2.59s/it]\n269it [11:50,  2.58s/it]\n270it [11:52,  2.59s/it]\n271it [11:55,  2.58s/it]\n272it [11:58,  2.59s/it]\n273it [12:00,  2.55s/it]\n274it [12:03,  2.54s/it]\n275it [12:05,  2.52s/it]\n276it [12:08,  2.52s/it]\n277it [12:10,  2.51s/it]\n278it [12:13,  2.51s/it]\n279it [12:15,  2.50s/it]\n280it [12:18,  2.49s/it]\n281it [12:20,  2.49s/it]\n282it [12:23,  2.48s/it]\n283it [12:25,  2.49s/it]\n284it [12:28,  2.50s/it]\n285it [12:30,  2.50s/it]\n286it [12:32,  2.49s/it]\n287it [12:35,  2.49s/it]\n288it [12:37,  2.49s/it]\n289it [12:40,  2.49s/it]\n290it [12:42,  2.50s/it]\n291it [12:45,  2.49s/it]\n292it [12:47,  2.50s/it]\n293it [12:50,  2.49s/it]\n294it [12:52,  2.50s/it]\n295it [12:55,  2.50s/it]\n296it [12:57,  2.51s/it]\n297it [13:00,  2.50s/it]\n298it [13:02,  2.50s/it]\n299it [13:05,  2.50s/it]\n300it [13:07,  2.50s/it]\n301it [13:10,  2.50s/it]\n302it [13:12,  2.49s/it]\n303it [13:15,  2.49s/it]\n304it [13:17,  2.49s/it]\n305it [13:20,  2.49s/it]\n306it [13:22,  2.49s/it]\n307it [13:25,  2.49s/it]\n308it [13:27,  2.50s/it]\n309it [13:30,  2.49s/it]\n310it [13:32,  2.49s/it]\n311it [13:35,  2.49s/it]\n312it [13:37,  2.50s/it]\n313it [13:40,  2.49s/it]\n314it [13:42,  2.50s/it]\n315it [13:45,  2.49s/it]\n316it [13:47,  2.49s/it]\n317it [13:50,  2.48s/it]\n318it [13:52,  2.49s/it]\n319it [13:55,  2.48s/it]\n320it [13:57,  2.51s/it]\n321it [14:00,  2.50s/it]\n322it [14:02,  2.49s/it]\n323it [14:05,  2.48s/it]\n324it [14:07,  2.49s/it]\n325it [14:10,  2.49s/it]\n326it [14:12,  2.50s/it]\n327it [14:15,  2.49s/it]\n328it [14:17,  2.49s/it]\n329it [14:20,  2.49s/it]\n330it [14:22,  2.50s/it]\n331it [14:25,  2.49s/it]\n332it [14:27,  2.49s/it]\n333it [14:30,  2.49s/it]\n334it [14:32,  2.48s/it]\n335it [14:35,  2.48s/it]\n336it [14:37,  2.49s/it]\n337it [14:40,  2.49s/it]\n338it [14:42,  2.50s/it]\n339it [14:45,  2.49s/it]\n340it [14:47,  2.49s/it]\n341it [14:50,  2.51s/it]\n342it [14:52,  2.53s/it]\n343it [14:55,  2.53s/it]\n344it [14:57,  2.54s/it]\n345it [15:00,  2.52s/it]\n345it [15:01,  2.61s/it]\nTraceback (most recent call last):\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py\", line 180, in <module>\n    for step, (i, x) in enumerate(tqdm(data_loader)):\n  File \"/home/china/Desktop/badminton-trajectory-analysis/.venv/lib/python3.12/site-packages/tqdm/std.py\", line 1187, in __iter__\n    for obj in iterable:\n  File \"/home/china/Desktop/badminton-trajectory-analysis/.venv/lib/python3.12/site-packages/torch/utils/data/dataloader.py\", line 732, in __next__\n    data = self._next_data()\n           ^^^^^^^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/.venv/lib/python3.12/site-packages/torch/utils/data/dataloader.py\", line 788, in _next_data\n    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/.venv/lib/python3.12/site-packages/torch/utils/data/_utils/fetch.py\", line 33, in fetch\n    data.append(next(self.dataset_iter))\n                ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/dataset.py\", line 739, in __iter__\n    frames = self.__process__(np.array(frame_list)[..., ::-1])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/dataset.py\", line 805, in __process__\n    frames = np.concatenate((frames, img), axis=0)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyboardInterrupt\n",
+  "retryable": true
+}

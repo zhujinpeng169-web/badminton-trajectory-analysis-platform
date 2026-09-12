@@ -1,0 +1,45 @@
+{
+  "question": "能否判断谁获胜",
+  "routing": {
+    "classification": {
+      "question": "能否判断谁获胜",
+      "intent": "unsupported_inference",
+      "subject": [],
+      "rally_ids": [],
+      "required_tools": [],
+      "constraints": {
+        "must_use_json_fields_only": true,
+        "must_cite_evidence": false,
+        "allow_technical_inference": false,
+        "allow_outcome_inference": false
+      },
+      "reason": "当前轨迹数据无法支持该推断",
+      "confidence": 0.99
+    },
+    "execution_plan": {
+      "steps": [
+        {
+          "tool": "get_quality_report",
+          "params": {}
+        }
+      ]
+    },
+    "evidence": [],
+    "limitations": [
+      "事件表示轨迹条件，不等同于已确认击球或具体技术动作。",
+      "当前数据没有比分或人工真值，不能推断胜负或检测准确率。",
+      "没有找到与该问题范围匹配的工具证据，数据不足，无法判断。"
+    ]
+  },
+  "reflection": {
+    "pass": false,
+    "issues": [
+      "no_evidence: 没有可供核对的证据"
+    ]
+  },
+  "output_validation": {
+    "warnings": []
+  },
+  "report": "数据不足，无法判断。",
+  "report_path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/report.md"
+}

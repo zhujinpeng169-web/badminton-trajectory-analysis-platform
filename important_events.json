@@ -1,0 +1,850 @@
+{
+  "source": "event_analysis.json",
+  "input_event_count": 4881,
+  "important_event_count": 120,
+  "events": [
+    {
+      "event_type": "轨迹异常事件",
+      "time": 0.095,
+      "frame": 2,
+      "importance": 4.0,
+      "evidence": "frame=2; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 1.238,
+      "frame": 26,
+      "importance": 4.0,
+      "evidence": "frame=26; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 3.762,
+      "frame": 79,
+      "importance": 4.0,
+      "evidence": "frame=79; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 4.238,
+      "frame": 89,
+      "importance": 4.0,
+      "evidence": "frame=89; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 6.952,
+      "frame": 146,
+      "importance": 4.0,
+      "evidence": "frame=146; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 8.762,
+      "frame": 184,
+      "importance": 4.0,
+      "evidence": "frame=184; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 9.857,
+      "frame": 207,
+      "importance": 4.0,
+      "evidence": "frame=207; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 10.476,
+      "frame": 220,
+      "importance": 4.0,
+      "evidence": "frame=220; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 15.333,
+      "frame": 322,
+      "importance": 4.0,
+      "evidence": "frame=322; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 16.333,
+      "frame": 343,
+      "importance": 4.0,
+      "evidence": "frame=343; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 18.286,
+      "frame": 384,
+      "importance": 4.0,
+      "evidence": "frame=384; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 18.762,
+      "frame": 394,
+      "importance": 4.0,
+      "evidence": "frame=394; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 19.238,
+      "frame": 404,
+      "importance": 4.0,
+      "evidence": "frame=404; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 20.095,
+      "frame": 422,
+      "importance": 4.0,
+      "evidence": "frame=422; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 21.619,
+      "frame": 454,
+      "importance": 4.0,
+      "evidence": "frame=454; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 22.19,
+      "frame": 466,
+      "importance": 4.0,
+      "evidence": "frame=466; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 28.381,
+      "frame": 596,
+      "importance": 4.0,
+      "evidence": "frame=596; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 29.143,
+      "frame": 612,
+      "importance": 4.0,
+      "evidence": "frame=612; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 33.905,
+      "frame": 712,
+      "importance": 4.0,
+      "evidence": "frame=712; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 35.048,
+      "frame": 736,
+      "importance": 4.0,
+      "evidence": "frame=736; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 35.524,
+      "frame": 746,
+      "importance": 4.0,
+      "evidence": "frame=746; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 36.0,
+      "frame": 756,
+      "importance": 4.0,
+      "evidence": "frame=756; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 38.286,
+      "frame": 804,
+      "importance": 4.0,
+      "evidence": "frame=804; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 38.857,
+      "frame": 816,
+      "importance": 4.0,
+      "evidence": "frame=816; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 39.333,
+      "frame": 826,
+      "importance": 4.0,
+      "evidence": "frame=826; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 40.048,
+      "frame": 841,
+      "importance": 4.0,
+      "evidence": "frame=841; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 42.714,
+      "frame": 897,
+      "importance": 4.0,
+      "evidence": "frame=897; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 43.857,
+      "frame": 921,
+      "importance": 4.0,
+      "evidence": "frame=921; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 47.476,
+      "frame": 997,
+      "importance": 4.0,
+      "evidence": "frame=997; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 49.429,
+      "frame": 1038,
+      "importance": 4.0,
+      "evidence": "frame=1038; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 50.048,
+      "frame": 1051,
+      "importance": 4.0,
+      "evidence": "frame=1051; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 50.524,
+      "frame": 1061,
+      "importance": 4.0,
+      "evidence": "frame=1061; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 51.0,
+      "frame": 1071,
+      "importance": 4.0,
+      "evidence": "frame=1071; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 51.619,
+      "frame": 1084,
+      "importance": 4.0,
+      "evidence": "frame=1084; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 52.095,
+      "frame": 1094,
+      "importance": 4.0,
+      "evidence": "frame=1094; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 52.857,
+      "frame": 1110,
+      "importance": 4.0,
+      "evidence": "frame=1110; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 53.333,
+      "frame": 1120,
+      "importance": 4.0,
+      "evidence": "frame=1120; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 53.81,
+      "frame": 1130,
+      "importance": 4.0,
+      "evidence": "frame=1130; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 57.619,
+      "frame": 1210,
+      "importance": 4.0,
+      "evidence": "frame=1210; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 58.238,
+      "frame": 1223,
+      "importance": 4.0,
+      "evidence": "frame=1223; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 58.714,
+      "frame": 1233,
+      "importance": 4.0,
+      "evidence": "frame=1233; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 59.191,
+      "frame": 1243,
+      "importance": 4.0,
+      "evidence": "frame=1243; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 60.429,
+      "frame": 1269,
+      "importance": 4.0,
+      "evidence": "frame=1269; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 60.905,
+      "frame": 1279,
+      "importance": 4.0,
+      "evidence": "frame=1279; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 61.381,
+      "frame": 1289,
+      "importance": 4.0,
+      "evidence": "frame=1289; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 62.619,
+      "frame": 1315,
+      "importance": 4.0,
+      "evidence": "frame=1315; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 63.095,
+      "frame": 1325,
+      "importance": 4.0,
+      "evidence": "frame=1325; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 64.762,
+      "frame": 1360,
+      "importance": 4.0,
+      "evidence": "frame=1360; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 65.238,
+      "frame": 1370,
+      "importance": 4.0,
+      "evidence": "frame=1370; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 65.714,
+      "frame": 1380,
+      "importance": 4.0,
+      "evidence": "frame=1380; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 66.191,
+      "frame": 1390,
+      "importance": 4.0,
+      "evidence": "frame=1390; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 66.667,
+      "frame": 1400,
+      "importance": 4.0,
+      "evidence": "frame=1400; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 67.143,
+      "frame": 1410,
+      "importance": 4.0,
+      "evidence": "frame=1410; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 68.048,
+      "frame": 1429,
+      "importance": 4.0,
+      "evidence": "frame=1429; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 68.524,
+      "frame": 1439,
+      "importance": 4.0,
+      "evidence": "frame=1439; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 69.333,
+      "frame": 1456,
+      "importance": 4.0,
+      "evidence": "frame=1456; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 71.095,
+      "frame": 1493,
+      "importance": 4.0,
+      "evidence": "frame=1493; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 71.571,
+      "frame": 1503,
+      "importance": 4.0,
+      "evidence": "frame=1503; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 72.238,
+      "frame": 1517,
+      "importance": 4.0,
+      "evidence": "frame=1517; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 72.714,
+      "frame": 1527,
+      "importance": 4.0,
+      "evidence": "frame=1527; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 73.619,
+      "frame": 1546,
+      "importance": 4.0,
+      "evidence": "frame=1546; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 74.238,
+      "frame": 1559,
+      "importance": 4.0,
+      "evidence": "frame=1559; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 74.762,
+      "frame": 1570,
+      "importance": 4.0,
+      "evidence": "frame=1570; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 75.381,
+      "frame": 1583,
+      "importance": 4.0,
+      "evidence": "frame=1583; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 75.857,
+      "frame": 1593,
+      "importance": 4.0,
+      "evidence": "frame=1593; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 76.333,
+      "frame": 1603,
+      "importance": 4.0,
+      "evidence": "frame=1603; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 76.857,
+      "frame": 1614,
+      "importance": 4.0,
+      "evidence": "frame=1614; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 78.191,
+      "frame": 1642,
+      "importance": 4.0,
+      "evidence": "frame=1642; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 78.714,
+      "frame": 1653,
+      "importance": 4.0,
+      "evidence": "frame=1653; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 79.191,
+      "frame": 1663,
+      "importance": 4.0,
+      "evidence": "frame=1663; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 80.0,
+      "frame": 1680,
+      "importance": 4.0,
+      "evidence": "frame=1680; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 80.81,
+      "frame": 1697,
+      "importance": 4.0,
+      "evidence": "frame=1697; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 81.286,
+      "frame": 1707,
+      "importance": 4.0,
+      "evidence": "frame=1707; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 81.762,
+      "frame": 1717,
+      "importance": 4.0,
+      "evidence": "frame=1717; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 82.238,
+      "frame": 1727,
+      "importance": 4.0,
+      "evidence": "frame=1727; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 82.714,
+      "frame": 1737,
+      "importance": 4.0,
+      "evidence": "frame=1737; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 85.333,
+      "frame": 1792,
+      "importance": 4.0,
+      "evidence": "frame=1792; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 85.905,
+      "frame": 1804,
+      "importance": 4.0,
+      "evidence": "frame=1804; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 87.143,
+      "frame": 1830,
+      "importance": 4.0,
+      "evidence": "frame=1830; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 87.619,
+      "frame": 1840,
+      "importance": 4.0,
+      "evidence": "frame=1840; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 88.191,
+      "frame": 1852,
+      "importance": 4.0,
+      "evidence": "frame=1852; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 90.286,
+      "frame": 1896,
+      "importance": 4.0,
+      "evidence": "frame=1896; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 90.762,
+      "frame": 1906,
+      "importance": 4.0,
+      "evidence": "frame=1906; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 91.238,
+      "frame": 1916,
+      "importance": 4.0,
+      "evidence": "frame=1916; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 91.81,
+      "frame": 1928,
+      "importance": 4.0,
+      "evidence": "frame=1928; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 93.0,
+      "frame": 1953,
+      "importance": 4.0,
+      "evidence": "frame=1953; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 95.571,
+      "frame": 2007,
+      "importance": 4.0,
+      "evidence": "frame=2007; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 96.048,
+      "frame": 2017,
+      "importance": 4.0,
+      "evidence": "frame=2017; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 96.524,
+      "frame": 2027,
+      "importance": 4.0,
+      "evidence": "frame=2027; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 97.667,
+      "frame": 2051,
+      "importance": 4.0,
+      "evidence": "frame=2051; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 98.143,
+      "frame": 2061,
+      "importance": 4.0,
+      "evidence": "frame=2061; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 98.667,
+      "frame": 2072,
+      "importance": 4.0,
+      "evidence": "frame=2072; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 99.333,
+      "frame": 2086,
+      "importance": 4.0,
+      "evidence": "frame=2086; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 99.81,
+      "frame": 2096,
+      "importance": 4.0,
+      "evidence": "frame=2096; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 101.095,
+      "frame": 2123,
+      "importance": 4.0,
+      "evidence": "frame=2123; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 102.238,
+      "frame": 2147,
+      "importance": 4.0,
+      "evidence": "frame=2147; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 102.714,
+      "frame": 2157,
+      "importance": 4.0,
+      "evidence": "frame=2157; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 103.191,
+      "frame": 2167,
+      "importance": 4.0,
+      "evidence": "frame=2167; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 105.429,
+      "frame": 2214,
+      "importance": 4.0,
+      "evidence": "frame=2214; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 106.048,
+      "frame": 2227,
+      "importance": 4.0,
+      "evidence": "frame=2227; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 106.524,
+      "frame": 2237,
+      "importance": 4.0,
+      "evidence": "frame=2237; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 107.0,
+      "frame": 2247,
+      "importance": 4.0,
+      "evidence": "frame=2247; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 108.619,
+      "frame": 2281,
+      "importance": 4.0,
+      "evidence": "frame=2281; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 109.095,
+      "frame": 2291,
+      "importance": 4.0,
+      "evidence": "frame=2291; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 109.667,
+      "frame": 2303,
+      "importance": 4.0,
+      "evidence": "frame=2303; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 111.476,
+      "frame": 2341,
+      "importance": 4.0,
+      "evidence": "frame=2341; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 111.952,
+      "frame": 2351,
+      "importance": 4.0,
+      "evidence": "frame=2351; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 114.143,
+      "frame": 2397,
+      "importance": 4.0,
+      "evidence": "frame=2397; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 114.619,
+      "frame": 2407,
+      "importance": 4.0,
+      "evidence": "frame=2407; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 115.095,
+      "frame": 2417,
+      "importance": 4.0,
+      "evidence": "frame=2417; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 116.333,
+      "frame": 2443,
+      "importance": 4.0,
+      "evidence": "frame=2443; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 119.524,
+      "frame": 2510,
+      "importance": 4.0,
+      "evidence": "frame=2510; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 120.095,
+      "frame": 2522,
+      "importance": 4.0,
+      "evidence": "frame=2522; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 120.572,
+      "frame": 2532,
+      "importance": 4.0,
+      "evidence": "frame=2532; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 121.095,
+      "frame": 2543,
+      "importance": 4.0,
+      "evidence": "frame=2543; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 121.905,
+      "frame": 2560,
+      "importance": 4.0,
+      "evidence": "frame=2560; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 123.572,
+      "frame": 2595,
+      "importance": 4.0,
+      "evidence": "frame=2595; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 124.048,
+      "frame": 2605,
+      "importance": 4.0,
+      "evidence": "frame=2605; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 124.619,
+      "frame": 2617,
+      "importance": 4.0,
+      "evidence": "frame=2617; ball_jump_flag=1"
+    },
+    {
+      "event_type": "轨迹异常事件",
+      "time": 127.048,
+      "frame": 2668,
+      "importance": 4.0,
+      "evidence": "frame=2668; ball_jump_flag=1"
+    }
+  ],
+  "limitations": [
+    "重要性是规则排序分数，不代表击球类型或比赛结果。"
+  ]
+}

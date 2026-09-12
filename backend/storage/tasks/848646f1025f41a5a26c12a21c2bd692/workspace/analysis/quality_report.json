@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "frame_count": 13344,
+  "valid_frame_count": 11284,
+  "unique_frame_count": 13344,
+  "valid_unique_frame_count": 11284,
+  "non_finite_value_count": 0,
+  "fps": 20.999984631446726,
+  "ball_visible_ratio": 0.8456,
+  "ball_valid_coverage_ratio": 0.8456,
+  "ball_max_missing_gap": 109,
+  "ball_jump_count": 0,
+  "ball_jump_ratio": 0.0,
+  "ball_speed_max_mps": null,
+  "ball_speed_p95_mps": null,
+  "ball_speed_p99_mps": null,
+  "ball_anomaly_count": 0,
+  "ball_anomaly_ratio": 0.0,
+  "player_valid_frame_count": 13083,
+  "player_valid_frame_ratio": 0.9804,
+  "player_valid_coverage_ratio": 0.9804,
+  "player_identity_switch_count": 403,
+  "calibration_available": true,
+  "projection_dimension": "2d",
+  "player_near_speed_max_mps": NaN,
+  "player_near_speed_p95_mps": null,
+  "player_near_speed_p99_mps": null,
+  "player_far_speed_max_mps": NaN,
+  "player_far_speed_p95_mps": null,
+  "player_far_speed_p99_mps": null,
+  "max_player_speed_mps": null,
+  "max_ball_projected_speed_mps": null,
+  "duplicate_frame_count": 0,
+  "non_monotonic_frame_count": 1,
+  "csv_parse_error_count": 0,
+  "invalid_row_count": 0,
+  "missing_field_count": 0,
+  "suspicious_metric_flags": [
+    "ball_missing_gap_long",
+    "player_identity_switch",
+    "non_monotonic_frames"
+  ],
+  "warnings": [
+    "连续缺失帧过长",
+    "运动员身份发生切换",
+    "帧号不是单调递增"
+  ],
+  "per_rally_quality_summary": {
+    "available": false,
+    "unavailable_reason": "rally field missing"
+  },
+  "overall_quality": "poor"
+}

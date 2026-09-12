@@ -1,0 +1,2162 @@
+{
+  "config": {
+    "reflection": true,
+    "evidence_validator": true,
+    "memory": false
+  },
+  "config_name": "no_memory",
+  "question_count": 100,
+  "metrics": {
+    "Intent Accuracy": 1.0,
+    "Tool Selection Accuracy": 1.0,
+    "Evidence Grounding Score": 1.0,
+    "Hallucination Rate": 0.0,
+    "Unsupported Inference Rate": 0.0,
+    "Memory Consistency Score": 0.0
+  },
+  "cases": [
+    {
+      "id": "n01",
+      "question": "分析运动员A",
+      "category": "normal",
+      "expected_intent": "player_analysis",
+      "actual_intent": "player_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_player_analysis"
+      ],
+      "evidence_count": 10,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n02",
+      "question": "分析运动员B移动情况",
+      "category": "normal",
+      "expected_intent": "player_analysis",
+      "actual_intent": "player_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_player_analysis"
+      ],
+      "evidence_count": 10,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n03",
+      "question": "运动员A的移动距离是多少",
+      "category": "normal",
+      "expected_intent": "player_analysis",
+      "actual_intent": "player_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_player_analysis"
+      ],
+      "evidence_count": 10,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n04",
+      "question": "运动员B的速度数据",
+      "category": "normal",
+      "expected_intent": "player_analysis",
+      "actual_intent": "player_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_player_analysis"
+      ],
+      "evidence_count": 10,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n05",
+      "question": "比较运动员A和B",
+      "category": "normal",
+      "expected_intent": "player_comparison",
+      "actual_intent": "player_comparison",
+      "intent_match": true,
+      "expected_tools": [
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_player_analysis"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n06",
+      "question": "对比A和B的移动距离",
+      "category": "normal",
+      "expected_intent": "player_comparison",
+      "actual_intent": "player_comparison",
+      "intent_match": true,
+      "expected_tools": [
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_player_analysis"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n07",
+      "question": "羽毛球速度如何",
+      "category": "normal",
+      "expected_intent": "match_summary",
+      "actual_intent": "match_summary",
+      "intent_match": true,
+      "expected_tools": [
+        "get_match_summary"
+      ],
+      "actual_tools": [
+        "get_match_summary"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n08",
+      "question": "羽毛球轨迹如何",
+      "category": "normal",
+      "expected_intent": "match_summary",
+      "actual_intent": "match_summary",
+      "intent_match": true,
+      "expected_tools": [
+        "get_match_summary"
+      ],
+      "actual_tools": [
+        "get_match_summary"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n09",
+      "question": "比赛总体情况",
+      "category": "normal",
+      "expected_intent": "match_summary",
+      "actual_intent": "match_summary",
+      "intent_match": true,
+      "expected_tools": [
+        "get_match_summary"
+      ],
+      "actual_tools": [
+        "get_match_summary"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n10",
+      "question": "总结比赛数据",
+      "category": "normal",
+      "expected_intent": "match_summary",
+      "actual_intent": "match_summary",
+      "intent_match": true,
+      "expected_tools": [
+        "get_match_summary"
+      ],
+      "actual_tools": [
+        "get_match_summary"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n11",
+      "question": "比赛概览",
+      "category": "normal",
+      "expected_intent": "match_summary",
+      "actual_intent": "match_summary",
+      "intent_match": true,
+      "expected_tools": [
+        "get_match_summary"
+      ],
+      "actual_tools": [
+        "get_match_summary"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n12",
+      "question": "最长回合",
+      "category": "normal",
+      "expected_intent": "rally_analysis",
+      "actual_intent": "rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 10 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "n13",
+      "question": "最短回合",
+      "category": "normal",
+      "expected_intent": "rally_analysis",
+      "actual_intent": "rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 10 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "n14",
+      "question": "第二回合持续多久",
+      "category": "normal",
+      "expected_intent": "rally_analysis",
+      "actual_intent": "rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 2 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "n15",
+      "question": "第二回合事件数量",
+      "category": "normal",
+      "expected_intent": "event_rally_analysis",
+      "actual_intent": "event_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "actual_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 2 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "n16",
+      "question": "一共有多少个回合",
+      "category": "normal",
+      "expected_intent": "rally_analysis",
+      "actual_intent": "rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 10 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "n17",
+      "question": "整场轨迹异常情况",
+      "category": "normal",
+      "expected_intent": "event_analysis",
+      "actual_intent": "event_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_event_analysis"
+      ],
+      "actual_tools": [
+        "get_event_analysis"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n18",
+      "question": "有哪些高速事件",
+      "category": "normal",
+      "expected_intent": "event_analysis",
+      "actual_intent": "event_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_event_analysis"
+      ],
+      "actual_tools": [
+        "get_event_analysis"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n19",
+      "question": "方向突变事件统计",
+      "category": "normal",
+      "expected_intent": "event_analysis",
+      "actual_intent": "event_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_event_analysis"
+      ],
+      "actual_tools": [
+        "get_event_analysis"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n20",
+      "question": "数据质量概览",
+      "category": "normal",
+      "expected_intent": "match_summary",
+      "actual_intent": "match_summary",
+      "intent_match": true,
+      "expected_tools": [
+        "get_match_summary"
+      ],
+      "actual_tools": [
+        "get_match_summary"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "c01",
+      "question": "分析运动员A在第二回合中的移动情况",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 2 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c02",
+      "question": "分析运动员B在第三回合的移动",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 3 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c03",
+      "question": "比较A和B在第二回合的移动",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 2 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c04",
+      "question": "比较运动员A和B在第三回合的距离",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 3 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c05",
+      "question": "分析A第二回合移动问题",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 2 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c06",
+      "question": "第二回合有哪些关键事件",
+      "category": "complex",
+      "expected_intent": "event_rally_analysis",
+      "actual_intent": "event_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "actual_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 2 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c07",
+      "question": "第三回合有哪些异常事件",
+      "category": "complex",
+      "expected_intent": "event_rally_analysis",
+      "actual_intent": "event_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "actual_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 3 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c08",
+      "question": "第二回合高速和方向突变事件",
+      "category": "complex",
+      "expected_intent": "event_rally_analysis",
+      "actual_intent": "event_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "actual_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 2 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c09",
+      "question": "第四回合的关键事件数量和持续时间",
+      "category": "complex",
+      "expected_intent": "event_rally_analysis",
+      "actual_intent": "event_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "actual_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 4 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c10",
+      "question": "比较A和B在第四回合的表现",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 4 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c11",
+      "question": "运动员A第二回合的距离和速度",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 2 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c12",
+      "question": "运动员B第二回合的方向事件和移动",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 2 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c13",
+      "question": "A和B在第五回合的移动距离比较",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 5 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c14",
+      "question": "分析运动员A在第六回合的移动和事件",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 6 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c15",
+      "question": "运动员B在第七回合的移动与关键事件",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 7 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u01",
+      "question": "谁赢了",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u02",
+      "question": "谁输掉了比赛",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u03",
+      "question": "谁实力更强",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u04",
+      "question": "谁技术更好",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u05",
+      "question": "谁杀球能力强",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u06",
+      "question": "谁防守能力强",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u07",
+      "question": "谁战术更好",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u08",
+      "question": "谁水平最高",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u09",
+      "question": "谁更适合比赛",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u10",
+      "question": "运动员A的打法是什么",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "b01",
+      "question": "第二回合速度99m/s是不是杀球",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "b02",
+      "question": "运动员A后场比例高是不是喜欢后场打法",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "b03",
+      "question": "方向变化是不是吊球",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "b04",
+      "question": "高速轨迹能证明扣杀吗",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "b05",
+      "question": "前场比例高说明网前球多吗",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "n21",
+      "question": "分析运动员A的覆盖范围",
+      "category": "normal",
+      "expected_intent": "player_analysis",
+      "actual_intent": "player_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_player_analysis"
+      ],
+      "evidence_count": 10,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n22",
+      "question": "分析运动员B的站位数据",
+      "category": "normal",
+      "expected_intent": "player_analysis",
+      "actual_intent": "player_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_player_analysis"
+      ],
+      "evidence_count": 10,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n23",
+      "question": "运动员A平均移动速度是多少",
+      "category": "normal",
+      "expected_intent": "player_analysis",
+      "actual_intent": "player_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_player_analysis"
+      ],
+      "evidence_count": 10,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n24",
+      "question": "运动员B累计移动距离是多少",
+      "category": "normal",
+      "expected_intent": "player_analysis",
+      "actual_intent": "player_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_player_analysis"
+      ],
+      "evidence_count": 10,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n25",
+      "question": "第一回合持续时间",
+      "category": "normal",
+      "expected_intent": "rally_analysis",
+      "actual_intent": "rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n26",
+      "question": "第五回合有多长",
+      "category": "normal",
+      "expected_intent": "rally_analysis",
+      "actual_intent": "rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 5 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "n27",
+      "question": "全场有多少高速事件",
+      "category": "normal",
+      "expected_intent": "event_analysis",
+      "actual_intent": "event_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_event_analysis"
+      ],
+      "actual_tools": [
+        "get_event_analysis"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n28",
+      "question": "全场有多少异常轨迹",
+      "category": "normal",
+      "expected_intent": "event_analysis",
+      "actual_intent": "event_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_event_analysis"
+      ],
+      "actual_tools": [
+        "get_event_analysis"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n29",
+      "question": "比赛视频信息是什么",
+      "category": "normal",
+      "expected_intent": "match_summary",
+      "actual_intent": "match_summary",
+      "intent_match": true,
+      "expected_tools": [
+        "get_match_summary"
+      ],
+      "actual_tools": [
+        "get_match_summary"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "n30",
+      "question": "分析整场羽毛球数据",
+      "category": "normal",
+      "expected_intent": "match_summary",
+      "actual_intent": "match_summary",
+      "intent_match": true,
+      "expected_tools": [
+        "get_match_summary"
+      ],
+      "actual_tools": [
+        "get_match_summary"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "c16",
+      "question": "比较A和B在第一回合的移动距离",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "c17",
+      "question": "比较运动员A和B在第五回合的速度",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 5 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c18",
+      "question": "分析A在第三回合的移动和范围",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 3 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c19",
+      "question": "分析B在第四回合的距离和速度",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 4 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c20",
+      "question": "第一回合有哪些关键事件和持续时间",
+      "category": "complex",
+      "expected_intent": "event_rally_analysis",
+      "actual_intent": "event_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "actual_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "evidence_count": 11,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [],
+      "validator_warnings": []
+    },
+    {
+      "id": "c21",
+      "question": "第五回合的高速事件数量",
+      "category": "complex",
+      "expected_intent": "event_rally_analysis",
+      "actual_intent": "event_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "actual_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 5 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c22",
+      "question": "第六回合方向突变和异常事件",
+      "category": "complex",
+      "expected_intent": "event_rally_analysis",
+      "actual_intent": "event_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "actual_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 6 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c23",
+      "question": "哪个回合轨迹变化最大",
+      "category": "complex",
+      "expected_intent": "rally_analysis",
+      "actual_intent": "rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 10 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c24",
+      "question": "比较第二回合和第三回合的事件数量",
+      "category": "complex",
+      "expected_intent": "event_rally_analysis",
+      "actual_intent": "event_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "actual_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "evidence_count": 20,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 2 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c25",
+      "question": "第二回合运动员A和B的移动与关键事件",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 2 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c26",
+      "question": "第三回合运动员A覆盖范围以及异常事件",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 3 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c27",
+      "question": "比较A和B在第四回合的距离数据",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 4 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c28",
+      "question": "第七回合有哪些高速事件和方向突变",
+      "category": "complex",
+      "expected_intent": "event_rally_analysis",
+      "actual_intent": "event_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "actual_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 7 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c29",
+      "question": "比较A和B在第八回合的站位范围",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 8 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "c30",
+      "question": "第九回合运动员B移动距离和事件数量",
+      "category": "complex",
+      "expected_intent": "player_rally_analysis",
+      "actual_intent": "player_rally_analysis",
+      "intent_match": true,
+      "expected_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "actual_tools": [
+        "get_rally_analysis",
+        "get_player_analysis"
+      ],
+      "evidence_count": 6,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "evidence_mismatch: 回答数字 9 不在证据值中"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u11",
+      "question": "运动员A杀球能力如何",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u12",
+      "question": "运动员B技术水平怎么样",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u13",
+      "question": "谁更强",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u14",
+      "question": "谁会赢",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u15",
+      "question": "谁的战术更好",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u16",
+      "question": "谁更有潜力",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u17",
+      "question": "A的进攻能力如何",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u18",
+      "question": "B的防守能力如何",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u19",
+      "question": "谁更适合训练",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    },
+    {
+      "id": "u20",
+      "question": "哪一个技术更好",
+      "category": "unsupported",
+      "expected_intent": "unsupported_inference",
+      "actual_intent": "unsupported_inference",
+      "intent_match": true,
+      "expected_tools": [],
+      "actual_tools": [],
+      "evidence_count": 0,
+      "evidence_grounding": 1.0,
+      "unsupported_terms": [],
+      "hallucination": false,
+      "reflection_issues": [
+        "unsupported_inference: 杀球",
+        "no_evidence: 没有可供核对的证据"
+      ],
+      "validator_warnings": []
+    }
+  ],
+  "conversations": [
+    {
+      "id": "m01",
+      "checks": [
+        {
+          "turn": 2,
+          "expected_subject": [
+            "player_A"
+          ],
+          "actual_subject": [],
+          "passed": false
+        },
+        {
+          "turn": 3,
+          "expected_subject": [
+            "player_A",
+            "player_B"
+          ],
+          "actual_subject": [
+            "player_B"
+          ],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "m02",
+      "checks": [
+        {
+          "turn": 2,
+          "expected_subject": [
+            "player_A"
+          ],
+          "actual_subject": [],
+          "passed": false
+        },
+        {
+          "turn": 3,
+          "expected_subject": [
+            "player_A",
+            "player_B"
+          ],
+          "actual_subject": [
+            "player_A"
+          ],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "m03",
+      "checks": [
+        {
+          "turn": 2,
+          "expected_subject": [
+            "player_A"
+          ],
+          "actual_subject": [],
+          "passed": false
+        },
+        {
+          "turn": 3,
+          "expected_subject": [
+            "player_A",
+            "player_B"
+          ],
+          "actual_subject": [],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "m04",
+      "checks": [
+        {
+          "turn": 2,
+          "expected_subject": [
+            "player_A"
+          ],
+          "actual_subject": [],
+          "passed": false
+        },
+        {
+          "turn": 3,
+          "expected_subject": [
+            "player_A",
+            "player_B"
+          ],
+          "actual_subject": [],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "m05",
+      "checks": [
+        {
+          "turn": 2,
+          "expected_subject": [
+            "player_A"
+          ],
+          "actual_subject": [],
+          "passed": false
+        },
+        {
+          "turn": 3,
+          "expected_subject": [
+            "player_A",
+            "player_B"
+          ],
+          "actual_subject": [],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "m06",
+      "checks": [
+        {
+          "turn": 2,
+          "expected_subject": [
+            "player_A"
+          ],
+          "actual_subject": [],
+          "passed": false
+        },
+        {
+          "turn": 3,
+          "expected_subject": [
+            "player_A",
+            "player_B"
+          ],
+          "actual_subject": [],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "m07",
+      "checks": [
+        {
+          "turn": 2,
+          "expected_subject": [
+            "player_A"
+          ],
+          "actual_subject": [],
+          "passed": false
+        },
+        {
+          "turn": 3,
+          "expected_subject": [
+            "player_A",
+            "player_B"
+          ],
+          "actual_subject": [
+            "player_A"
+          ],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "m08",
+      "checks": [
+        {
+          "turn": 2,
+          "expected_subject": [
+            "player_A"
+          ],
+          "actual_subject": [],
+          "passed": false
+        },
+        {
+          "turn": 3,
+          "expected_subject": [
+            "player_A",
+            "player_B"
+          ],
+          "actual_subject": [],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "m09",
+      "checks": [
+        {
+          "turn": 2,
+          "expected_subject": [
+            "player_A"
+          ],
+          "actual_subject": [],
+          "passed": false
+        },
+        {
+          "turn": 3,
+          "expected_subject": [
+            "player_A",
+            "player_B"
+          ],
+          "actual_subject": [],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "m10",
+      "checks": [
+        {
+          "turn": 2,
+          "expected_subject": [
+            "player_A"
+          ],
+          "actual_subject": [],
+          "passed": false
+        },
+        {
+          "turn": 3,
+          "expected_subject": [
+            "player_A",
+            "player_B"
+          ],
+          "actual_subject": [],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "m11",
+      "checks": [
+        {
+          "turn": 2,
+          "expected_subject": [
+            "player_A"
+          ],
+          "actual_subject": [],
+          "passed": false
+        },
+        {
+          "turn": 3,
+          "expected_subject": [
+            "player_A",
+            "player_B"
+          ],
+          "actual_subject": [
+            "player_A"
+          ],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "m12",
+      "checks": [
+        {
+          "turn": 2,
+          "expected_subject": [
+            "player_A"
+          ],
+          "actual_subject": [],
+          "passed": false
+        },
+        {
+          "turn": 3,
+          "expected_subject": [
+            "player_A",
+            "player_B"
+          ],
+          "actual_subject": [],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "m13",
+      "checks": [
+        {
+          "turn": 2,
+          "expected_subject": [
+            "player_A"
+          ],
+          "actual_subject": [],
+          "passed": false
+        },
+        {
+          "turn": 3,
+          "expected_subject": [
+            "player_A",
+            "player_B"
+          ],
+          "actual_subject": [],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "m14",
+      "checks": [
+        {
+          "turn": 2,
+          "expected_subject": [
+            "player_A"
+          ],
+          "actual_subject": [],
+          "passed": false
+        },
+        {
+          "turn": 3,
+          "expected_subject": [
+            "player_A",
+            "player_B"
+          ],
+          "actual_subject": [],
+          "passed": false
+        }
+      ]
+    },
+    {
+      "id": "m15",
+      "checks": [
+        {
+          "turn": 2,
+          "expected_subject": [
+            "player_A"
+          ],
+          "actual_subject": [],
+          "passed": false
+        },
+        {
+          "turn": 3,
+          "expected_subject": [
+            "player_A",
+            "player_B"
+          ],
+          "actual_subject": [],
+          "passed": false
+        }
+      ]
+    }
+  ]
+}

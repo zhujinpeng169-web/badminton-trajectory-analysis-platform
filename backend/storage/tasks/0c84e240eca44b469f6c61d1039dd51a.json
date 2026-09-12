@@ -1,0 +1,41 @@
+{
+  "task_id": "0c84e240eca44b469f6c61d1039dd51a",
+  "id": "0c84e240eca44b469f6c61d1039dd51a",
+  "filename": "41.MP4",
+  "path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/41_1ddaddabdfd649b3a3a1e4dbfb9f6c2e.MP4",
+  "status": "completed",
+  "progress": 100,
+  "question": "能否判断谁获胜",
+  "analysis_dir": "/home/china/Desktop/badminton-trajectory-analysis",
+  "created_at": "2026-09-11T00:26:17.280475+00:00",
+  "updated_at": "2026-09-11T00:26:18.913375+00:00",
+  "result_path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/results/0c84e240eca44b469f6c61d1039dd51a.json",
+  "error": null,
+  "routing": {
+    "classification": {
+      "question": "能否判断谁获胜",
+      "intent": "unsupported_inference",
+      "subject": [],
+      "rally_ids": [],
+      "required_tools": [],
+      "constraints": {
+        "must_use_json_fields_only": true,
+        "must_cite_evidence": false,
+        "allow_technical_inference": false,
+        "allow_outcome_inference": false
+      },
+      "reason": "当前轨迹数据无法支持该推断",
+      "confidence": 0.99
+    },
+    "execution_plan": {
+      "steps": []
+    },
+    "evidence": [],
+    "limitations": [
+      "事件表示轨迹条件，不等同于已确认击球或具体技术动作。",
+      "当前数据没有比分或人工真值，不能推断胜负或检测准确率。",
+      "没有找到与该问题范围匹配的工具证据，数据不足，无法判断。"
+    ]
+  },
+  "answer": "数据不足，无法判断。"
+}

@@ -1,0 +1,99 @@
+{
+  "task_id": "9ad9998ae9334147b22afe315c49e6d1",
+  "id": "9ad9998ae9334147b22afe315c49e6d1",
+  "filename": "41.MP4",
+  "path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/56217b8e9d4b4614b3122fc1aa8c25f1.mp4",
+  "status": "failed",
+  "progress": 100,
+  "pipeline_progress": 10,
+  "stage": "detect_ball",
+  "stage_status": "failed",
+  "stages": {
+    "validate_video": {
+      "stage": "validate_video",
+      "status": "completed",
+      "progress": 8,
+      "error": null,
+      "started_at": "2026-09-11T07:31:42.976406+00:00",
+      "finished_at": "2026-09-11T07:31:42.982449+00:00",
+      "files": {
+        "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/56217b8e9d4b4614b3122fc1aa8c25f1.mp4"
+      }
+    },
+    "detect_ball": {
+      "stage": "detect_ball",
+      "status": "failed",
+      "progress": 10,
+      "error": "命令失败(-15): /home/china/Desktop/badminton-trajectory-analysis/.venv/bin/python /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py --video_file /home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/56217b8e9d4b4614b3122fc1aa8c25f1.mp4 --tracknet_file /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/ckpts/TrackNet_best.pt --save_dir /home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/9ad9998ae9334147b22afe315c49e6d1/workspace/tracknet --device cpu --large_video\nstdout: Generate median image...\nMedian image generated.\nVideo length: 13344\n\nstderr: \n0it [00:00, ?it/s]\n1it [00:08,  8.97s/it]\n2it [00:17,  8.86s/it]\n3it [00:26,  8.79s/it]\n4it [00:35,  8.80s/it]\n5it [00:44,  8.80s/it]\n6it [00:52,  8.80s/it]\n7it [01:01,  8.87s/it]\n8it [01:10,  8.83s/it]\n9it [01:19,  8.77s/it]\n10it [01:27,  8.74s/it]",
+      "started_at": "2026-09-11T07:31:42.982678+00:00",
+      "finished_at": "2026-09-11T07:34:15.659111+00:00",
+      "files": {
+        "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/56217b8e9d4b4614b3122fc1aa8c25f1.mp4"
+      }
+    },
+    "track_players": {
+      "stage": "track_players",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "export_coordinates": {
+      "stage": "export_coordinates",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "generate_analysis": {
+      "stage": "generate_analysis",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "render_video": {
+      "stage": "render_video",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "ready": {
+      "stage": "ready",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    }
+  },
+  "question": null,
+  "workspace_dir": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/9ad9998ae9334147b22afe315c49e6d1/workspace",
+  "analysis_dir": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/9ad9998ae9334147b22afe315c49e6d1/workspace/analysis",
+  "created_at": "2026-09-11T07:31:41.603635+00:00",
+  "updated_at": "2026-09-11T07:34:15.659353+00:00",
+  "result_path": null,
+  "quality_report_path": null,
+  "quality": null,
+  "quality_warnings": [],
+  "artifacts": {
+    "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/56217b8e9d4b4614b3122fc1aa8c25f1.mp4"
+  },
+  "error": "命令失败(-15): /home/china/Desktop/badminton-trajectory-analysis/.venv/bin/python /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py --video_file /home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/56217b8e9d4b4614b3122fc1aa8c25f1.mp4 --tracknet_file /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/ckpts/TrackNet_best.pt --save_dir /home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/9ad9998ae9334147b22afe315c49e6d1/workspace/tracknet --device cpu --large_video\nstdout: Generate median image...\nMedian image generated.\nVideo length: 13344\n\nstderr: \n0it [00:00, ?it/s]\n1it [00:08,  8.97s/it]\n2it [00:17,  8.86s/it]\n3it [00:26,  8.79s/it]\n4it [00:35,  8.80s/it]\n5it [00:44,  8.80s/it]\n6it [00:52,  8.80s/it]\n7it [01:01,  8.87s/it]\n8it [01:10,  8.83s/it]\n9it [01:19,  8.77s/it]\n10it [01:27,  8.74s/it]",
+  "routing": null,
+  "answer": null,
+  "stage_started_at": "2026-09-11T07:31:42.982678+00:00",
+  "stage_finished_at": "2026-09-11T07:34:15.659111+00:00",
+  "stage_error": "命令失败(-15): /home/china/Desktop/badminton-trajectory-analysis/.venv/bin/python /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py --video_file /home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/56217b8e9d4b4614b3122fc1aa8c25f1.mp4 --tracknet_file /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/ckpts/TrackNet_best.pt --save_dir /home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/9ad9998ae9334147b22afe315c49e6d1/workspace/tracknet --device cpu --large_video\nstdout: Generate median image...\nMedian image generated.\nVideo length: 13344\n\nstderr: \n0it [00:00, ?it/s]\n1it [00:08,  8.97s/it]\n2it [00:17,  8.86s/it]\n3it [00:26,  8.79s/it]\n4it [00:35,  8.80s/it]\n5it [00:44,  8.80s/it]\n6it [00:52,  8.80s/it]\n7it [01:01,  8.87s/it]\n8it [01:10,  8.83s/it]\n9it [01:19,  8.77s/it]\n10it [01:27,  8.74s/it]",
+  "retryable": true
+}

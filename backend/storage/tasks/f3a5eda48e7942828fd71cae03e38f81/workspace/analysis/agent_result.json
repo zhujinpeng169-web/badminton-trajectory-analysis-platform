@@ -1,0 +1,207 @@
+{
+  "question": "分析羽毛球轨迹",
+  "routing": {
+    "classification": {
+      "question": "分析羽毛球轨迹",
+      "intent": "match_summary",
+      "subject": [],
+      "rally_ids": [],
+      "required_tools": [
+        "get_match_summary"
+      ],
+      "constraints": {
+        "must_use_json_fields_only": true,
+        "must_cite_evidence": true,
+        "allow_technical_inference": false,
+        "allow_outcome_inference": false,
+        "allow_training_advice": false
+      },
+      "confidence": 0.92
+    },
+    "execution_plan": {
+      "steps": [
+        {
+          "tool": "get_match_summary",
+          "params": {}
+        },
+        {
+          "tool": "get_quality_report",
+          "params": {}
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "metric": "ball.anomaly_count",
+        "value": 0,
+        "unit": "frames",
+        "source": "analysis.json.ball_analysis",
+        "description": "[match] 被已有导出标记为异常跳变的帧数",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "ball.direction_changes",
+        "value": 1966,
+        "unit": "count",
+        "source": "analysis.json.ball_analysis",
+        "description": "[match] 方向变化超过 30 度的次数",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "ball.average_speed_mps",
+        "value": 244.26221944148318,
+        "unit": "m/s",
+        "source": "analysis.json.ball_analysis",
+        "description": "[match] 羽毛球二维单应性投影平均速度",
+        "reliability": 0.25,
+        "validation_reason": "速度超过 100 m/s 异常阈值，保留但降低可靠性"
+      },
+      {
+        "metric": "ball.max_speed_mps",
+        "value": 9807.352559065184,
+        "unit": "m/s",
+        "source": "analysis.json.ball_analysis",
+        "description": "[match] 羽毛球二维单应性投影最大速度",
+        "reliability": 0.25,
+        "validation_reason": "速度超过 100 m/s 异常阈值，保留但降低可靠性"
+      },
+      {
+        "metric": "ball.speed_change_count",
+        "value": 5095,
+        "unit": "count",
+        "source": "analysis.json.ball_analysis",
+        "description": "[match] 相邻有效速度增加的次数",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_A.average_speed_mps",
+        "value": 173.3049232300335,
+        "unit": "m/s",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 运动员平均速度",
+        "reliability": 0.25,
+        "validation_reason": "速度超过 100 m/s 异常阈值，保留但降低可靠性"
+      },
+      {
+        "metric": "player_B.average_speed_mps",
+        "value": 169.61966614583633,
+        "unit": "m/s",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 运动员平均速度",
+        "reliability": 0.25,
+        "validation_reason": "速度超过 100 m/s 异常阈值，保留但降低可靠性"
+      },
+      {
+        "metric": "ball.total_frames",
+        "value": 13344,
+        "unit": "frames",
+        "source": "analysis.json.ball_analysis",
+        "description": "[match] 输入逐帧轨迹总帧数",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "ball.trajectory_length_m",
+        "value": 146666.1791474307,
+        "unit": "m",
+        "source": "analysis.json.ball_analysis",
+        "description": "[match] 过滤异常跳变后的二维投影轨迹长度",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "ball.valid_frames",
+        "value": 11284,
+        "unit": "frames",
+        "source": "analysis.json.ball_analysis",
+        "description": "[match] Visibility 有效且坐标非负的羽毛球帧数",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_A.distance_m",
+        "value": 58184.23955909658,
+        "unit": "m",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 运动员累计移动距离",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_A.valid_frames",
+        "value": 10073,
+        "unit": "frames",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 像素坐标非负的运动员帧数",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_B.distance_m",
+        "value": 56161.07146088641,
+        "unit": "m",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 运动员累计移动距离",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_B.valid_frames",
+        "value": 9934,
+        "unit": "frames",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 像素坐标非负的运动员帧数",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "ball.data_notes",
+        "value": [
+          "速度和距离沿用已有二维单应性投影结果，不代表真实三维球速。"
+        ],
+        "unit": "unknown",
+        "source": "analysis.json.ball_analysis",
+        "description": "[match] 羽毛球统计指标",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_A.movement_style",
+        "value": "未推断",
+        "unit": "label",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 仅凭轨迹数据不推断技术风格",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_B.movement_style",
+        "value": "未推断",
+        "unit": "label",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 仅凭轨迹数据不推断技术风格",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      }
+    ],
+    "limitations": [
+      "事件表示轨迹条件，不等同于已确认击球或具体技术动作。",
+      "当前数据没有比分或人工真值，不能推断胜负或检测准确率。"
+    ]
+  },
+  "reflection": {
+    "pass": false,
+    "issues": [
+      "unsupported_inference: 战术",
+      "evidence_mismatch: 回答数字 146 不在证据值中"
+    ]
+  },
+  "output_validation": {
+    "warnings": []
+  },
+  "report": "**轨迹质量报告（overall_quality=poor）**  \n数据不足，无法判断球员身份切换、帧序列非单调性或球轨迹缺失问题。  \n检测到以下可疑指标：  \n- `ball_missing_gap_long`：未提供具体帧区间或数量，无法确认。  \n- `player_identity_switch`：未提供帧级身份匹配记录，无法确认。  \n- `non_monotonic_frames`：未提供帧序列时间戳或坐标单调性验证，无法确认。  \n\n---\n\n**observed_metric**  \n所有数值均来自分析 JSON 字段，未做技术推断或胜负判断：\n\n### 羽毛球轨迹统计  \n- **方向变化次数**：1966 次（>30°）  \n- **平均速度**：244.26 m/s（二维单应性投影）  \n- **最大速度**：9807.35 m/s（二维单应性投影）  \n- **轨迹总长度**：146,666.18 米（过滤异常跳变后）  \n- **有效帧数**：11,284 帧（Visibility 有效且坐标非负）  \n\n### 球员运动统计  \n- **A 球员**  \n  - 平均速度：173.30 m/s（二维单应性投影）  \n  - 移动距离：58,184.24 米  \n  - 有效帧数：10,073 帧  \n- **B 球员**  \n  - 平均速度：169.62 m/s（二维单应性投影）  \n  - 移动距离：56,161.07 米  \n  - 有效帧数：9,934 帧  \n\n### 数据注释  \n- 速度与距离基于二维单应性投影，不代表真实三维球速。  \n- 球员运动风格未推断（仅凭轨迹数据无法判断）。  \n\n---\n\n**确认限制**  \n检测到相关轨迹统计，但当前数据无法证明其对应具体击球动作。\n- 无比分或人工真值，无法推断胜负或准确率。  \n检测到相关轨迹统计，但当前数据无法证明其对应具体击球动作。\n\n---  \n**质量警告**  \n- `ball.average_speed_mps`、`ball.max_speed_mps`、`player_A.average_speed_mps`、`player_B.average_speed_mps` 均超过 100 m/s 异常阈值，可靠性已降为 0.25。  \n- 超速可能源于投影误差或数据污染，但无真值或比对基准，无法校正或排除。  \n\n---  \n**结论（严格依据 JSON 字段）**  \n- 羽毛球轨迹总长度为 146,666.18 米，方向变化 1966 次，平均速度 244.26 m/s，最大速度 9807.35 m/s。  \n- 球员 A 总移动距离 58,184.24 米，球员 B 总移动距离 56,161.07 米，A 的有效帧数（10,073）多于 B（9,934）。  \n- 数据质量报告标记为 poor，因存在可疑指标（`ball_missing_gap_long`、`player_identity_switch`、`non_monotonic_frames`），但未提供证据字段，无法验证。  \n- 未提供任何可确认击球事件、技术动作或胜负结果。\n\n当前轨迹数据无法证明该结论。",
+  "report_path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/report.md"
+}

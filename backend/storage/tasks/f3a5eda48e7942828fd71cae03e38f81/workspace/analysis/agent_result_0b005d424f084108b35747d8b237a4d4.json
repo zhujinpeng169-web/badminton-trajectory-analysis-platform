@@ -1,0 +1,121 @@
+{
+  "question": "第二回合有哪些关键事件",
+  "routing": {
+    "classification": {
+      "question": "第二回合有哪些关键事件",
+      "intent": "event_rally_analysis",
+      "subject": [],
+      "rally_ids": [
+        2
+      ],
+      "required_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "constraints": {
+        "must_use_json_fields_only": true,
+        "must_cite_evidence": true,
+        "allow_technical_inference": false,
+        "allow_outcome_inference": false,
+        "allow_training_advice": false
+      },
+      "confidence": 0.92
+    },
+    "execution_plan": {
+      "steps": [
+        {
+          "tool": "get_event_analysis",
+          "params": {
+            "rally_ids": [
+              2
+            ]
+          }
+        },
+        {
+          "tool": "get_rally_analysis",
+          "params": {
+            "rally_ids": [
+              2
+            ]
+          }
+        },
+        {
+          "tool": "get_quality_report",
+          "params": {}
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "metric": "rally[2].direction_change_count",
+        "value": 4,
+        "unit": "count",
+        "source": "rally_analysis.json",
+        "description": "[rally] 回合内方向突变次数",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "rally[2].speed_peak",
+        "value": 63.3755,
+        "unit": "m/s",
+        "source": "rally_analysis.json",
+        "description": "[rally] 回合内有效二维投影速度峰值",
+        "reliability": 1.0,
+        "validation_reason": "速度未超过 100 m/s 异常阈值"
+      },
+      {
+        "metric": "rally[2].player_B.distance",
+        "value": 295.172,
+        "unit": "pixel",
+        "source": "rally_analysis.json",
+        "description": "[rally] 远端轨迹累计像素距离",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "rally[2].ball_event_count",
+        "value": 11,
+        "unit": "count",
+        "source": "rally_analysis.json",
+        "description": "[rally] 回合内事件数量",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "rally[2].duration",
+        "value": 1.0,
+        "unit": "s",
+        "source": "rally_analysis.json",
+        "description": "[rally] 回合持续时间",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "rally[2].player_A.distance",
+        "value": 0.82,
+        "unit": "pixel",
+        "source": "rally_analysis.json",
+        "description": "[rally] 近端轨迹累计像素距离",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      }
+    ],
+    "limitations": [
+      "事件表示轨迹条件，不等同于已确认击球或具体技术动作。",
+      "当前数据没有比分或人工真值，不能推断胜负或检测准确率。"
+    ]
+  },
+  "reflection": {
+    "pass": false,
+    "issues": [
+      "unsupported_inference: 杀球, 吊球, 战术",
+      "evidence_mismatch: 回答数字 2 不在证据值中"
+    ]
+  },
+  "output_validation": {
+    "warnings": []
+  },
+  "report": "第二回合（rally_id=2）的关键事件如下，所有数据均来自轨迹分析，不等同于已确认击球或具体技术动作：\n\n- **方向突变次数**: 4 次（observed_metric, rally[2].direction_change_count）\n- **有效二维投影速度峰值**: 63.3755 m/s（observed_metric, rally[2].speed_peak）\n- **远端轨迹累计像素距离**: 295.172 pixel（observed_metric, rally[2].player_B.distance）\n- **事件总数量**: 11 个（observed_metric, rally[2].ball_event_count）\n- **回合持续时间**: 1.0 s（observed_metric, rally[2].duration）\n- **近端轨迹累计像素距离**: 0.82 pixel（observed_metric, rally[2].player_A.distance）\n\n质量报告 overall_quality=poor，存在以下可疑指标：\n- ball_missing_gap_long\n- player_identity_switch\n- non_monotonic_frames\n\n检测到相关轨迹统计，但当前数据无法证明其对应具体击球动作。\n\n当前轨迹数据无法证明该结论。",
+  "report_path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/report.md"
+}

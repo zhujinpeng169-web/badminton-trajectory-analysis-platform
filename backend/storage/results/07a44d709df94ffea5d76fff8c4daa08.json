@@ -1,0 +1,240 @@
+{
+  "question": "第二回合有哪些关键事件",
+  "routing": {
+    "classification": {
+      "question": "第二回合有哪些关键事件",
+      "intent": "event_rally_analysis",
+      "subject": [],
+      "rally_ids": [
+        2
+      ],
+      "required_tools": [
+        "get_event_analysis",
+        "get_rally_analysis"
+      ],
+      "constraints": {
+        "must_use_json_fields_only": true,
+        "must_cite_evidence": true,
+        "allow_technical_inference": false,
+        "allow_outcome_inference": false,
+        "allow_training_advice": false
+      },
+      "confidence": 0.92
+    },
+    "execution_plan": {
+      "steps": [
+        {
+          "tool": "get_event_analysis",
+          "params": {
+            "rally_ids": [
+              2
+            ]
+          }
+        },
+        {
+          "tool": "get_rally_analysis",
+          "params": {
+            "rally_ids": [
+              2
+            ]
+          }
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "metric": "rally[2].direction_change_count",
+        "value": 519,
+        "unit": "count",
+        "source": "rally_analysis.json",
+        "description": "[rally] 回合内方向突变次数",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "rally[2].speed_peak",
+        "value": 99.8096,
+        "unit": "m/s",
+        "source": "rally_analysis.json",
+        "description": "[rally] 回合内有效二维投影速度峰值",
+        "reliability": 1.0,
+        "validation_reason": "速度未超过 100 m/s 异常阈值"
+      },
+      {
+        "metric": "rally[2].ball_event_count",
+        "value": 951,
+        "unit": "count",
+        "source": "rally_analysis.json",
+        "description": "[rally] 回合内事件数量",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "rally[2].duration",
+        "value": 132.048,
+        "unit": "s",
+        "source": "rally_analysis.json",
+        "description": "[rally] 回合持续时间",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "rally[2].player_A.distance",
+        "value": 14816.089,
+        "unit": "pixel",
+        "source": "rally_analysis.json",
+        "description": "[rally] 近端轨迹累计像素距离",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "rally[2].player_B.distance",
+        "value": 9702.934,
+        "unit": "pixel",
+        "source": "rally_analysis.json",
+        "description": "[rally] 远端轨迹累计像素距离",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "event[1038].evidence",
+        "value": "frame=1038; ball_jump_flag=1",
+        "unit": "text",
+        "source": "event_analysis.json",
+        "description": "[event] 原始字段证据",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "event[1051].evidence",
+        "value": "frame=1051; ball_jump_flag=1",
+        "unit": "text",
+        "source": "event_analysis.json",
+        "description": "[event] 原始字段证据",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "event[1061].evidence",
+        "value": "frame=1061; ball_jump_flag=1",
+        "unit": "text",
+        "source": "event_analysis.json",
+        "description": "[event] 原始字段证据",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "event[1071].evidence",
+        "value": "frame=1071; ball_jump_flag=1",
+        "unit": "text",
+        "source": "event_analysis.json",
+        "description": "[event] 原始字段证据",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "event[1084].evidence",
+        "value": "frame=1084; ball_jump_flag=1",
+        "unit": "text",
+        "source": "event_analysis.json",
+        "description": "[event] 原始字段证据",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "event[1094].evidence",
+        "value": "frame=1094; ball_jump_flag=1",
+        "unit": "text",
+        "source": "event_analysis.json",
+        "description": "[event] 原始字段证据",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "event[1110].evidence",
+        "value": "frame=1110; ball_jump_flag=1",
+        "unit": "text",
+        "source": "event_analysis.json",
+        "description": "[event] 原始字段证据",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "event[1120].evidence",
+        "value": "frame=1120; ball_jump_flag=1",
+        "unit": "text",
+        "source": "event_analysis.json",
+        "description": "[event] 原始字段证据",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "event[1130].evidence",
+        "value": "frame=1130; ball_jump_flag=1",
+        "unit": "text",
+        "source": "event_analysis.json",
+        "description": "[event] 原始字段证据",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "event[1210].evidence",
+        "value": "frame=1210; ball_jump_flag=1",
+        "unit": "text",
+        "source": "event_analysis.json",
+        "description": "[event] 原始字段证据",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "event[1223].evidence",
+        "value": "frame=1223; ball_jump_flag=1",
+        "unit": "text",
+        "source": "event_analysis.json",
+        "description": "[event] 原始字段证据",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "event[1233].evidence",
+        "value": "frame=1233; ball_jump_flag=1",
+        "unit": "text",
+        "source": "event_analysis.json",
+        "description": "[event] 原始字段证据",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "event[1243].evidence",
+        "value": "frame=1243; ball_jump_flag=1",
+        "unit": "text",
+        "source": "event_analysis.json",
+        "description": "[event] 原始字段证据",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "event[1269].evidence",
+        "value": "frame=1269; ball_jump_flag=1",
+        "unit": "text",
+        "source": "event_analysis.json",
+        "description": "[event] 原始字段证据",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      }
+    ],
+    "limitations": [
+      "事件表示轨迹条件，不等同于已确认击球或具体技术动作。",
+      "当前数据没有比分或人工真值，不能推断胜负或检测准确率。"
+    ]
+  },
+  "reflection": {
+    "pass": true,
+    "issues": []
+  },
+  "output_validation": {
+    "warnings": []
+  },
+  "report": "第二回合的关键事件如下：\n\n- 回合内方向突变次数：519 次。\n- 回合内有效二维投影速度峰值：99.8096 m/s。\n- 回合内事件总数：951 个。\n- 回合持续时间：132.048 秒。\n- 近端球员（player_A）累计轨迹像素距离：14816.089 像素。\n- 远端球员（player_B）累计轨迹像素距离：9702.934 像素。\n\n事件序列（按帧编号）：\n- frame=1038; ball_jump_flag=1\n- frame=1051; ball_jump_flag=1\n- frame=1061; ball_jump_flag=1\n- frame=1071; ball_jump_flag=1\n- frame=1084; ball_jump_flag=1\n- frame=1094; ball_jump_flag=1\n- frame=1110; ball_jump_flag=1\n- frame=1120; ball_jump_flag=1\n- frame=1130; ball_jump_flag=1\n- frame=1210; ball_jump_flag=1\n- frame=1223; ball_jump_flag=1\n- frame=1233; ball_jump_flag=1\n- frame=1243; ball_jump_flag=1\n- frame=1269; ball_jump_flag=1\n\n以上数据均来源于 rally_analysis.json 和 event_analysis.json，字段可靠性均为 1.0，且通过粒度和不支持推断检查。事件表示轨迹条件，不等同于已确认击球或具体技术动作。当前数据无比分或人工真值，无法推断胜负或检测准确率。",
+  "report_path": "/home/china/Desktop/badminton-trajectory-analysis/report.md"
+}

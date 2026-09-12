@@ -1,0 +1,99 @@
+{
+  "task_id": "90572587336f4a9982533ac0c0fb54b9",
+  "id": "90572587336f4a9982533ac0c0fb54b9",
+  "filename": "41.MP4",
+  "path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/59cb1b91a58d48f48ec129120b01c749.mp4",
+  "status": "failed",
+  "progress": 100,
+  "pipeline_progress": 10,
+  "stage": "detect_ball",
+  "stage_status": "failed",
+  "stages": {
+    "validate_video": {
+      "stage": "validate_video",
+      "status": "completed",
+      "progress": 8,
+      "error": null,
+      "started_at": "2026-09-12T04:12:02.248342+00:00",
+      "finished_at": "2026-09-12T04:12:02.254551+00:00",
+      "files": {
+        "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/59cb1b91a58d48f48ec129120b01c749.mp4"
+      }
+    },
+    "detect_ball": {
+      "stage": "detect_ball",
+      "status": "failed",
+      "progress": 10,
+      "error": "命令失败(1): /home/china/Desktop/badminton-trajectory-analysis/.venv/bin/python /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py --video_file /home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/59cb1b91a58d48f48ec129120b01c749.mp4 --tracknet_file /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/ckpts/TrackNet_best.pt --save_dir /home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/90572587336f4a9982533ac0c0fb54b9/workspace/tracknet --device cuda --large_video --batch_size 32\nstdout: Generate median image...\nMedian image generated.\nVideo length: 13344\n\nstderr: \n0it [00:00, ?it/s]\n0it [00:03, ?it/s]\nTraceback (most recent call last):\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py\", line 184, in <module>\n    y_pred = tracknet(x).detach().cpu()\n             ^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1775, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1786, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/model.py\", line 65, in forward\n    x = torch.cat([nn.Upsample(scale_factor=2)(x), x3], dim=1)      # (N,  768,   72,   128)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 864.00 MiB. GPU 0 has a total capacity of 23.55 GiB of which 105.44 MiB is free. Process 2210 has 260.00 MiB memory in use. Process 8521 has 18.34 GiB memory in use. Including non-PyTorch memory, this process has 4.33 GiB memory in use. Of the allocated memory 3.32 GiB is allocated by PyTorch, and 735.86 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)\n",
+      "started_at": "2026-09-12T04:12:02.254853+00:00",
+      "finished_at": "2026-09-12T04:13:20.973694+00:00",
+      "files": {
+        "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/59cb1b91a58d48f48ec129120b01c749.mp4"
+      }
+    },
+    "track_players": {
+      "stage": "track_players",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "export_coordinates": {
+      "stage": "export_coordinates",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "generate_analysis": {
+      "stage": "generate_analysis",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "render_video": {
+      "stage": "render_video",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "ready": {
+      "stage": "ready",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    }
+  },
+  "question": null,
+  "workspace_dir": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/90572587336f4a9982533ac0c0fb54b9/workspace",
+  "analysis_dir": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/90572587336f4a9982533ac0c0fb54b9/workspace/analysis",
+  "created_at": "2026-09-12T04:10:36.217785+00:00",
+  "updated_at": "2026-09-12T04:13:20.974021+00:00",
+  "result_path": null,
+  "quality_report_path": null,
+  "quality": null,
+  "quality_warnings": [],
+  "artifacts": {
+    "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/59cb1b91a58d48f48ec129120b01c749.mp4"
+  },
+  "error": "命令失败(1): /home/china/Desktop/badminton-trajectory-analysis/.venv/bin/python /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py --video_file /home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/59cb1b91a58d48f48ec129120b01c749.mp4 --tracknet_file /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/ckpts/TrackNet_best.pt --save_dir /home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/90572587336f4a9982533ac0c0fb54b9/workspace/tracknet --device cuda --large_video --batch_size 32\nstdout: Generate median image...\nMedian image generated.\nVideo length: 13344\n\nstderr: \n0it [00:00, ?it/s]\n0it [00:03, ?it/s]\nTraceback (most recent call last):\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py\", line 184, in <module>\n    y_pred = tracknet(x).detach().cpu()\n             ^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1775, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1786, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/model.py\", line 65, in forward\n    x = torch.cat([nn.Upsample(scale_factor=2)(x), x3], dim=1)      # (N,  768,   72,   128)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 864.00 MiB. GPU 0 has a total capacity of 23.55 GiB of which 105.44 MiB is free. Process 2210 has 260.00 MiB memory in use. Process 8521 has 18.34 GiB memory in use. Including non-PyTorch memory, this process has 4.33 GiB memory in use. Of the allocated memory 3.32 GiB is allocated by PyTorch, and 735.86 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)\n",
+  "routing": null,
+  "answer": null,
+  "stage_started_at": "2026-09-12T04:12:02.254853+00:00",
+  "stage_finished_at": "2026-09-12T04:13:20.973694+00:00",
+  "stage_error": "命令失败(1): /home/china/Desktop/badminton-trajectory-analysis/.venv/bin/python /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py --video_file /home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/59cb1b91a58d48f48ec129120b01c749.mp4 --tracknet_file /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/ckpts/TrackNet_best.pt --save_dir /home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/90572587336f4a9982533ac0c0fb54b9/workspace/tracknet --device cuda --large_video --batch_size 32\nstdout: Generate median image...\nMedian image generated.\nVideo length: 13344\n\nstderr: \n0it [00:00, ?it/s]\n0it [00:03, ?it/s]\nTraceback (most recent call last):\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py\", line 184, in <module>\n    y_pred = tracknet(x).detach().cpu()\n             ^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1775, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/.venv/lib/python3.12/site-packages/torch/nn/modules/module.py\", line 1786, in _call_impl\n    return forward_call(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/model.py\", line 65, in forward\n    x = torch.cat([nn.Upsample(scale_factor=2)(x), x3], dim=1)      # (N,  768,   72,   128)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 864.00 MiB. GPU 0 has a total capacity of 23.55 GiB of which 105.44 MiB is free. Process 2210 has 260.00 MiB memory in use. Process 8521 has 18.34 GiB memory in use. Including non-PyTorch memory, this process has 4.33 GiB memory in use. Of the allocated memory 3.32 GiB is allocated by PyTorch, and 735.86 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)\n",
+  "retryable": true
+}

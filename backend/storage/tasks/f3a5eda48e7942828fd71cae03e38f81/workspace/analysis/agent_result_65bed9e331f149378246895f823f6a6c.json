@@ -1,0 +1,94 @@
+{
+  "question": "分析运动员A",
+  "routing": {
+    "classification": {
+      "question": "分析运动员A",
+      "intent": "player_analysis",
+      "subject": [
+        "player_A"
+      ],
+      "rally_ids": [],
+      "required_tools": [
+        "get_player_analysis"
+      ],
+      "constraints": {
+        "must_use_json_fields_only": true,
+        "must_cite_evidence": true,
+        "allow_technical_inference": false,
+        "allow_outcome_inference": false,
+        "allow_training_advice": false
+      },
+      "confidence": 0.92
+    },
+    "execution_plan": {
+      "steps": [
+        {
+          "tool": "get_player_analysis",
+          "params": {
+            "players": [
+              "player_A"
+            ]
+          }
+        },
+        {
+          "tool": "get_quality_report",
+          "params": {}
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "metric": "player_A.average_speed_mps",
+        "value": 173.3049232300335,
+        "unit": "m/s",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 运动员平均速度",
+        "reliability": 0.25,
+        "validation_reason": "速度超过 100 m/s 异常阈值，保留但降低可靠性"
+      },
+      {
+        "metric": "player_A.distance_m",
+        "value": 58184.23955909658,
+        "unit": "m",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 运动员累计移动距离",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_A.valid_frames",
+        "value": 10073,
+        "unit": "frames",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 像素坐标非负的运动员帧数",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_A.movement_style",
+        "value": "未推断",
+        "unit": "label",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 仅凭轨迹数据不推断技术风格",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      }
+    ],
+    "limitations": [
+      "事件表示轨迹条件，不等同于已确认击球或具体技术动作。",
+      "当前数据没有比分或人工真值，不能推断胜负或检测准确率。"
+    ]
+  },
+  "reflection": {
+    "pass": false,
+    "issues": [
+      "unsupported_inference: 战术",
+      "evidence_mismatch: 回答数字 100 不在证据值中"
+    ]
+  },
+  "output_validation": {
+    "warnings": []
+  },
+  "report": "观察到的运动员A相关指标如下：\n\n- **平均速度**：173.3049232300335 m/s（可靠性：0.25），该值超过 100 m/s 异常阈值，保留但降低可靠性。\n- **累计移动距离**：58184.23955909658 米（可靠性：1.0）。\n- **有效帧数**：10073 帧（可靠性：1.0）。\n- **技术风格**：未推断（可靠性：1.0）。\n\n数据质量报告：\n- 质量等级：poor。\n- 怀疑标记：['ball_missing_gap_long', 'player_identity_switch', 'non_monotonic_frames']。\n检测到相关轨迹统计，但当前数据无法证明其对应具体击球动作。\n\n检测到相关轨迹统计，但当前数据无法证明其对应具体击球动作。\n\n请根据字段原始值与描述引用证据，无推断性表述。\n\n当前轨迹数据无法证明该结论。",
+  "report_path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/f3a5eda48e7942828fd71cae03e38f81/workspace/analysis/report.md"
+}

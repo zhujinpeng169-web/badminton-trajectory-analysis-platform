@@ -1,0 +1,143 @@
+{
+  "question": "分析运动员A",
+  "routing": {
+    "classification": {
+      "question": "分析运动员A",
+      "intent": "player_analysis",
+      "subject": [
+        "player_A"
+      ],
+      "rally_ids": [],
+      "required_tools": [
+        "get_player_analysis"
+      ],
+      "constraints": {
+        "must_use_json_fields_only": true,
+        "must_cite_evidence": true,
+        "allow_technical_inference": false,
+        "allow_outcome_inference": false,
+        "allow_training_advice": false
+      },
+      "confidence": 0.92
+    },
+    "execution_plan": {
+      "steps": [
+        {
+          "tool": "get_player_analysis",
+          "params": {
+            "players": [
+              "player_A"
+            ]
+          }
+        }
+      ]
+    },
+    "evidence": [
+      {
+        "metric": "player_A.average_speed_mps",
+        "value": 1.8774407487367777,
+        "unit": "m/s",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 运动员平均速度",
+        "reliability": 1.0,
+        "validation_reason": "速度未超过 100 m/s 异常阈值"
+      },
+      {
+        "metric": "player_A.distance_m",
+        "value": 1151.228759765625,
+        "unit": "m",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 运动员累计移动距离",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_A.valid_frames",
+        "value": 9730,
+        "unit": "frames",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 像素坐标非负的运动员帧数",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_A.back_ratio_pct",
+        "value": 94.85662266727356,
+        "unit": "%",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 位于后场的有效帧比例",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_A.court_coverage_area_m2",
+        "value": 52.8124024736947,
+        "unit": "m2",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 有效球场坐标的凸包覆盖面积；缺失时为 null",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_A.front_ratio_pct",
+        "value": 0.0,
+        "unit": "%",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 位于前场的有效帧比例",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_A.left_ratio_pct",
+        "value": 57.78334091943559,
+        "unit": "%",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 位于左半场的有效帧比例",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_A.mid_ratio_pct",
+        "value": 5.143377332726446,
+        "unit": "%",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 位于中场的有效帧比例",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_A.movement_style",
+        "value": "未推断",
+        "unit": "label",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 仅凭轨迹数据不推断技术风格",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      },
+      {
+        "metric": "player_A.right_ratio_pct",
+        "value": 42.216659080564405,
+        "unit": "%",
+        "source": "analysis.json.player_analysis",
+        "description": "[player/match] 位于右半场的有效帧比例",
+        "reliability": 1.0,
+        "validation_reason": "通过粒度和不支持推断检查"
+      }
+    ],
+    "limitations": [
+      "事件表示轨迹条件，不等同于已确认击球或具体技术动作。",
+      "当前数据没有比分或人工真值，不能推断胜负或检测准确率。"
+    ]
+  },
+  "reflection": {
+    "pass": false,
+    "issues": [
+      "unsupported_inference: 战术"
+    ]
+  },
+  "output_validation": {
+    "warnings": []
+  },
+  "report": "根据提供的工具返回数据，对运动员A的分析如下：\n\n- **平均速度**：1.8774407487367777 m/s  \n  来源：analysis.json.player_analysis，描述为“[player/match] 运动员平均速度”，可靠性1.0。\n\n- **累计移动距离**：1151.228759765625 米  \n  来源：analysis.json.player_analysis，描述为“[player/match] 运动员累计移动距离”，可靠性1.0。\n\n- **有效帧数**：9730 帧  \n  来源：analysis.json.player_analysis，描述为“[player/match] 像素坐标非负的运动员帧数”，可靠性1.0。\n\n- **后场有效帧比例**：94.85662266727356%  \n  来源：analysis.json.player_analysis，描述为“[player/match] 位于后场的有效帧比例”，可靠性1.0。\n\n- **球场覆盖面积**：52.8124024736947 平方米  \n  来源：analysis.json.player_analysis，描述为“[player/match] 有效球场坐标的凸包覆盖面积”，可靠性1.0。\n\n- **前场有效帧比例**：0.0%  \n  来源：analysis.json.player_analysis，描述为“[player/match] 位于前场的有效帧比例”，可靠性1.0。\n\n- **左半场有效帧比例**：57.78334091943559%  \n  来源：analysis.json.player_analysis，描述为“[player/match] 位于左半场的有效帧比例”，可靠性1.0。\n\n- **中场有效帧比例**：5.143377332726446%  \n  来源：analysis.json.player_analysis，描述为“[player/match] 位于中场的有效帧比例”，可靠性1.0。\n\n- **技术风格**：未推断  \n  来源：analysis.json.player_analysis，描述为“仅凭轨迹数据不推断技术风格”，可靠性1.0。\n\n- **右半场有效帧比例**：42.216659080564405%  \n  来源：analysis.json.player_analysis，描述为“[player/match] 位于右半场的有效帧比例”，可靠性1.0。\n\n检测到相关轨迹统计，但当前数据无法证明其对应具体击球动作。",
+  "report_path": "/home/china/Desktop/badminton-trajectory-analysis/report.md"
+}

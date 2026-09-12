@@ -1,0 +1,99 @@
+{
+  "task_id": "0589b76025da4f65827c1ad27e3a1461",
+  "id": "0589b76025da4f65827c1ad27e3a1461",
+  "filename": "41.MP4",
+  "path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/ca99f04fafdb431898f6ea799a66e0af.mp4",
+  "status": "failed",
+  "progress": 100,
+  "pipeline_progress": 10,
+  "stage": "detect_ball",
+  "stage_status": "failed",
+  "stages": {
+    "validate_video": {
+      "stage": "validate_video",
+      "status": "completed",
+      "progress": 8,
+      "error": null,
+      "started_at": "2026-09-11T11:38:05.482717+00:00",
+      "finished_at": "2026-09-11T11:38:05.487913+00:00",
+      "files": {
+        "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/ca99f04fafdb431898f6ea799a66e0af.mp4"
+      }
+    },
+    "detect_ball": {
+      "stage": "detect_ball",
+      "status": "failed",
+      "progress": 10,
+      "error": "命令失败(-2): /home/china/Desktop/badminton-trajectory-analysis/.venv/bin/python /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py --video_file /home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/ca99f04fafdb431898f6ea799a66e0af.mp4 --tracknet_file /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/ckpts/TrackNet_best.pt --save_dir /home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/0589b76025da4f65827c1ad27e3a1461/workspace/tracknet --device cuda --large_video --batch_size 32\nstdout: Generate median image...\nMedian image generated.\nVideo length: 13344\n\nstderr: \n0it [00:00, ?it/s]\n1it [00:02,  2.66s/it]\n2it [00:05,  2.58s/it]\n3it [00:07,  2.55s/it]\n4it [00:10,  2.52s/it]\n5it [00:12,  2.50s/it]\n6it [00:15,  2.49s/it]\n7it [00:17,  2.48s/it]\n8it [00:20,  2.49s/it]\n9it [00:22,  2.48s/it]\n10it [00:25,  2.48s/it]\n11it [00:27,  2.51s/it]\n12it [00:30,  2.52s/it]\n13it [00:32,  2.52s/it]\n14it [00:35,  2.53s/it]\n15it [00:37,  2.53s/it]\n16it [00:40,  2.53s/it]\n17it [00:42,  2.55s/it]\n18it [00:45,  2.56s/it]\n19it [00:48,  2.58s/it]\n20it [00:50,  2.59s/it]\n21it [00:53,  2.60s/it]\n22it [00:55,  2.62s/it]\n23it [00:58,  2.62s/it]\n24it [01:01,  2.60s/it]\n25it [01:03,  2.57s/it]\n26it [01:06,  2.54s/it]\n27it [01:08,  2.52s/it]\n28it [01:11,  2.50s/it]\n29it [01:13,  2.49s/it]\n30it [01:16,  2.50s/it]\n31it [01:18,  2.49s/it]\n32it [01:20,  2.49s/it]\n33it [01:23,  2.48s/it]\n34it [01:25,  2.48s/it]\n35it [01:28,  2.47s/it]\n36it [01:30,  2.47s/it]\n37it [01:33,  2.47s/it]\n38it [01:35,  2.47s/it]\n39it [01:38,  2.47s/it]\n40it [01:40,  2.47s/it]\n41it [01:43,  2.47s/it]\n42it [01:45,  2.48s/it]\n43it [01:48,  2.48s/it]\n44it [01:50,  2.47s/it]\n45it [01:53,  2.47s/it]\n46it [01:55,  2.47s/it]\n47it [01:57,  2.46s/it]\n48it [02:00,  2.47s/it]\n49it [02:02,  2.47s/it]\n50it [02:05,  2.47s/it]\n51it [02:07,  2.47s/it]\n52it [02:10,  2.47s/it]\n53it [02:12,  2.47s/it]\n54it [02:15,  2.48s/it]\n55it [02:17,  2.47s/it]\n56it [02:20,  2.48s/it]\n57it [02:22,  2.47s/it]\n57it [02:24,  2.54s/it]\nTraceback (most recent call last):\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py\", line 181, in <module>\n    x = x.float().to(device)\n        ^^^^^^^^^\nKeyboardInterrupt\n",
+      "started_at": "2026-09-11T11:38:05.488065+00:00",
+      "finished_at": "2026-09-11T11:41:34.190785+00:00",
+      "files": {
+        "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/ca99f04fafdb431898f6ea799a66e0af.mp4"
+      }
+    },
+    "track_players": {
+      "stage": "track_players",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "export_coordinates": {
+      "stage": "export_coordinates",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "generate_analysis": {
+      "stage": "generate_analysis",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "render_video": {
+      "stage": "render_video",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    },
+    "ready": {
+      "stage": "ready",
+      "status": "queued",
+      "progress": 0,
+      "error": null,
+      "started_at": null,
+      "finished_at": null,
+      "files": {}
+    }
+  },
+  "question": null,
+  "workspace_dir": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/0589b76025da4f65827c1ad27e3a1461/workspace",
+  "analysis_dir": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/0589b76025da4f65827c1ad27e3a1461/workspace/analysis",
+  "created_at": "2026-09-11T11:38:04.865565+00:00",
+  "updated_at": "2026-09-11T11:41:34.191115+00:00",
+  "result_path": null,
+  "quality_report_path": null,
+  "quality": null,
+  "quality_warnings": [],
+  "artifacts": {
+    "video": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/ca99f04fafdb431898f6ea799a66e0af.mp4"
+  },
+  "error": "命令失败(-2): /home/china/Desktop/badminton-trajectory-analysis/.venv/bin/python /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py --video_file /home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/ca99f04fafdb431898f6ea799a66e0af.mp4 --tracknet_file /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/ckpts/TrackNet_best.pt --save_dir /home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/0589b76025da4f65827c1ad27e3a1461/workspace/tracknet --device cuda --large_video --batch_size 32\nstdout: Generate median image...\nMedian image generated.\nVideo length: 13344\n\nstderr: \n0it [00:00, ?it/s]\n1it [00:02,  2.66s/it]\n2it [00:05,  2.58s/it]\n3it [00:07,  2.55s/it]\n4it [00:10,  2.52s/it]\n5it [00:12,  2.50s/it]\n6it [00:15,  2.49s/it]\n7it [00:17,  2.48s/it]\n8it [00:20,  2.49s/it]\n9it [00:22,  2.48s/it]\n10it [00:25,  2.48s/it]\n11it [00:27,  2.51s/it]\n12it [00:30,  2.52s/it]\n13it [00:32,  2.52s/it]\n14it [00:35,  2.53s/it]\n15it [00:37,  2.53s/it]\n16it [00:40,  2.53s/it]\n17it [00:42,  2.55s/it]\n18it [00:45,  2.56s/it]\n19it [00:48,  2.58s/it]\n20it [00:50,  2.59s/it]\n21it [00:53,  2.60s/it]\n22it [00:55,  2.62s/it]\n23it [00:58,  2.62s/it]\n24it [01:01,  2.60s/it]\n25it [01:03,  2.57s/it]\n26it [01:06,  2.54s/it]\n27it [01:08,  2.52s/it]\n28it [01:11,  2.50s/it]\n29it [01:13,  2.49s/it]\n30it [01:16,  2.50s/it]\n31it [01:18,  2.49s/it]\n32it [01:20,  2.49s/it]\n33it [01:23,  2.48s/it]\n34it [01:25,  2.48s/it]\n35it [01:28,  2.47s/it]\n36it [01:30,  2.47s/it]\n37it [01:33,  2.47s/it]\n38it [01:35,  2.47s/it]\n39it [01:38,  2.47s/it]\n40it [01:40,  2.47s/it]\n41it [01:43,  2.47s/it]\n42it [01:45,  2.48s/it]\n43it [01:48,  2.48s/it]\n44it [01:50,  2.47s/it]\n45it [01:53,  2.47s/it]\n46it [01:55,  2.47s/it]\n47it [01:57,  2.46s/it]\n48it [02:00,  2.47s/it]\n49it [02:02,  2.47s/it]\n50it [02:05,  2.47s/it]\n51it [02:07,  2.47s/it]\n52it [02:10,  2.47s/it]\n53it [02:12,  2.47s/it]\n54it [02:15,  2.48s/it]\n55it [02:17,  2.47s/it]\n56it [02:20,  2.48s/it]\n57it [02:22,  2.47s/it]\n57it [02:24,  2.54s/it]\nTraceback (most recent call last):\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py\", line 181, in <module>\n    x = x.float().to(device)\n        ^^^^^^^^^\nKeyboardInterrupt\n",
+  "routing": null,
+  "answer": null,
+  "stage_started_at": "2026-09-11T11:38:05.488065+00:00",
+  "stage_finished_at": "2026-09-11T11:41:34.190785+00:00",
+  "stage_error": "命令失败(-2): /home/china/Desktop/badminton-trajectory-analysis/.venv/bin/python /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py --video_file /home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/ca99f04fafdb431898f6ea799a66e0af.mp4 --tracknet_file /home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/ckpts/TrackNet_best.pt --save_dir /home/china/Desktop/badminton-trajectory-analysis/backend/storage/tasks/0589b76025da4f65827c1ad27e3a1461/workspace/tracknet --device cuda --large_video --batch_size 32\nstdout: Generate median image...\nMedian image generated.\nVideo length: 13344\n\nstderr: \n0it [00:00, ?it/s]\n1it [00:02,  2.66s/it]\n2it [00:05,  2.58s/it]\n3it [00:07,  2.55s/it]\n4it [00:10,  2.52s/it]\n5it [00:12,  2.50s/it]\n6it [00:15,  2.49s/it]\n7it [00:17,  2.48s/it]\n8it [00:20,  2.49s/it]\n9it [00:22,  2.48s/it]\n10it [00:25,  2.48s/it]\n11it [00:27,  2.51s/it]\n12it [00:30,  2.52s/it]\n13it [00:32,  2.52s/it]\n14it [00:35,  2.53s/it]\n15it [00:37,  2.53s/it]\n16it [00:40,  2.53s/it]\n17it [00:42,  2.55s/it]\n18it [00:45,  2.56s/it]\n19it [00:48,  2.58s/it]\n20it [00:50,  2.59s/it]\n21it [00:53,  2.60s/it]\n22it [00:55,  2.62s/it]\n23it [00:58,  2.62s/it]\n24it [01:01,  2.60s/it]\n25it [01:03,  2.57s/it]\n26it [01:06,  2.54s/it]\n27it [01:08,  2.52s/it]\n28it [01:11,  2.50s/it]\n29it [01:13,  2.49s/it]\n30it [01:16,  2.50s/it]\n31it [01:18,  2.49s/it]\n32it [01:20,  2.49s/it]\n33it [01:23,  2.48s/it]\n34it [01:25,  2.48s/it]\n35it [01:28,  2.47s/it]\n36it [01:30,  2.47s/it]\n37it [01:33,  2.47s/it]\n38it [01:35,  2.47s/it]\n39it [01:38,  2.47s/it]\n40it [01:40,  2.47s/it]\n41it [01:43,  2.47s/it]\n42it [01:45,  2.48s/it]\n43it [01:48,  2.48s/it]\n44it [01:50,  2.47s/it]\n45it [01:53,  2.47s/it]\n46it [01:55,  2.47s/it]\n47it [01:57,  2.46s/it]\n48it [02:00,  2.47s/it]\n49it [02:02,  2.47s/it]\n50it [02:05,  2.47s/it]\n51it [02:07,  2.47s/it]\n52it [02:10,  2.47s/it]\n53it [02:12,  2.47s/it]\n54it [02:15,  2.48s/it]\n55it [02:17,  2.47s/it]\n56it [02:20,  2.48s/it]\n57it [02:22,  2.47s/it]\n57it [02:24,  2.54s/it]\nTraceback (most recent call last):\n  File \"/home/china/Desktop/badminton-trajectory-analysis/external/TrackNetV3/predict.py\", line 181, in <module>\n    x = x.float().to(device)\n        ^^^^^^^^^\nKeyboardInterrupt\n",
+  "retryable": true
+}

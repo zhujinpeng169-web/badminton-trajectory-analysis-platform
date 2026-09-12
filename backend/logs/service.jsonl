@@ -1,0 +1,97 @@
+{"time": "2026-09-11T00:24:54.920950+00:00", "event": "upload", "task_id": "ef560d2ff8314d6a813d1e3010ce9082", "filename": "41.MP4", "path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/41.MP4"}
+{"time": "2026-09-11T00:25:09.682304+00:00", "event": "task_start", "task_id": "ef560d2ff8314d6a813d1e3010ce9082", "question": "分析运动员A"}
+{"time": "2026-09-11T00:25:09.682568+00:00", "event": "agent_start", "task_id": "ef560d2ff8314d6a813d1e3010ce9082", "question": "分析运动员A"}
+{"time": "2026-09-11T00:25:09.688168+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-11T00:25:28.216955+00:00", "event": "qwen_response", "model": "qwen3-vl:8b-instruct", "chars": 380}
+{"time": "2026-09-11T00:25:28.217931+00:00", "event": "task_finish", "task_id": "ef560d2ff8314d6a813d1e3010ce9082", "status": "completed", "result_path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/results/ef560d2ff8314d6a813d1e3010ce9082.json"}
+{"time": "2026-09-11T00:26:02.963556+00:00", "event": "upload", "task_id": "81ffc825c84845f49239e37e6a6a5580", "filename": "41.MP4", "path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/41_010ac1409954474d8fb90ce2209c58bb.MP4"}
+{"time": "2026-09-11T00:26:02.965820+00:00", "event": "task_start", "task_id": "81ffc825c84845f49239e37e6a6a5580", "question": "分析运动员A"}
+{"time": "2026-09-11T00:26:02.966127+00:00", "event": "agent_start", "task_id": "81ffc825c84845f49239e37e6a6a5580", "question": "分析运动员A"}
+{"time": "2026-09-11T00:26:02.968991+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-11T00:26:09.103006+00:00", "event": "qwen_response", "model": "qwen3-vl:8b-instruct", "chars": 1171}
+{"time": "2026-09-11T00:26:09.103808+00:00", "event": "task_finish", "task_id": "81ffc825c84845f49239e37e6a6a5580", "status": "completed", "result_path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/results/81ffc825c84845f49239e37e6a6a5580.json"}
+{"time": "2026-09-11T00:26:11.093666+00:00", "event": "upload", "task_id": "07a44d709df94ffea5d76fff8c4daa08", "filename": "41.MP4", "path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/41_8d44b05158454e9a8f611ea17e1e7e92.MP4"}
+{"time": "2026-09-11T00:26:11.098163+00:00", "event": "task_start", "task_id": "07a44d709df94ffea5d76fff8c4daa08", "question": "第二回合有哪些关键事件"}
+{"time": "2026-09-11T00:26:11.098624+00:00", "event": "agent_start", "task_id": "07a44d709df94ffea5d76fff8c4daa08", "question": "第二回合有哪些关键事件"}
+{"time": "2026-09-11T00:26:11.102100+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "第二回合有哪些关键事件"}
+{"time": "2026-09-11T00:26:15.777071+00:00", "event": "qwen_response", "model": "qwen3-vl:8b-instruct", "chars": 753}
+{"time": "2026-09-11T00:26:15.778503+00:00", "event": "task_finish", "task_id": "07a44d709df94ffea5d76fff8c4daa08", "status": "completed", "result_path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/results/07a44d709df94ffea5d76fff8c4daa08.json"}
+{"time": "2026-09-11T00:26:17.280659+00:00", "event": "upload", "task_id": "0c84e240eca44b469f6c61d1039dd51a", "filename": "41.MP4", "path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/uploads/41_1ddaddabdfd649b3a3a1e4dbfb9f6c2e.MP4"}
+{"time": "2026-09-11T00:26:17.285188+00:00", "event": "task_start", "task_id": "0c84e240eca44b469f6c61d1039dd51a", "question": "能否判断谁获胜"}
+{"time": "2026-09-11T00:26:17.286186+00:00", "event": "agent_start", "task_id": "0c84e240eca44b469f6c61d1039dd51a", "question": "能否判断谁获胜"}
+{"time": "2026-09-11T00:26:17.286625+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "能否判断谁获胜"}
+{"time": "2026-09-11T00:26:18.912714+00:00", "event": "qwen_response", "model": "qwen3-vl:8b-instruct", "chars": 10}
+{"time": "2026-09-11T00:26:18.913522+00:00", "event": "task_finish", "task_id": "0c84e240eca44b469f6c61d1039dd51a", "status": "completed", "result_path": "/home/china/Desktop/badminton-trajectory-analysis/backend/storage/results/0c84e240eca44b469f6c61d1039dd51a.json"}
+{"time": "2026-09-11T08:34:39.618752+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-11T08:36:24.672259+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-11T08:36:27.260456+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "第二回合有哪些关键事件"}
+{"time": "2026-09-11T08:36:29.574123+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析第二回合运动员A和运动员B的移动情况"}
+{"time": "2026-09-11T08:36:34.449733+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "能否判断谁获胜"}
+{"time": "2026-09-11T08:36:34.671220+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "球速最高的阶段是什么？"}
+{"time": "2026-09-11T08:36:36.424437+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "第二回合中有哪些值得重点检查的异常事件？"}
+{"time": "2026-09-11T09:19:14.485874+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-11T09:23:28.441760+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-11T09:23:28.446842+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "第二回合呢？"}
+{"time": "2026-09-11T09:23:32.775843+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "和B比较呢？"}
+{"time": "2026-09-11T11:12:07.654500+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-11T11:12:13.618415+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "第二回合呢？"}
+{"time": "2026-09-11T11:12:16.143169+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "和B比较呢？"}
+{"time": "2026-09-11T11:12:17.915105+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "能否判断谁获胜？"}
+{"time": "2026-09-11T11:12:18.716555+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "第二回合中有哪些值得重点检查的异常事件？"}
+{"time": "2026-09-11T11:13:19.192540+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-11T11:13:21.884193+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "第二回合中有哪些值得重点检查的异常事件？"}
+{"time": "2026-09-12T04:52:17.392041+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-12T04:52:30.808162+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "第二回合有哪些关键事件"}
+{"time": "2026-09-12T04:52:53.227711+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "能否判断谁获胜"}
+{"time": "2026-09-12T04:52:57.070939+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "你是什么模型"}
+{"time": "2026-09-12T04:55:33.247234+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员B"}
+{"time": "2026-09-12T04:55:56.540986+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "能否判断谁获胜"}
+{"time": "2026-09-12T04:56:36.882879+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员B"}
+{"time": "2026-09-12T04:59:22.616337+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-12T04:59:39.210549+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-12T04:59:51.443699+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员B"}
+{"time": "2026-09-12T05:00:01.630253+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员B"}
+{"time": "2026-09-12T05:00:15.646244+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "羽毛球轨迹分析"}
+{"time": "2026-09-12T05:00:28.279314+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "羽毛球轨迹分析"}
+{"time": "2026-09-12T05:01:12.554326+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-12T05:01:15.107400+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-12T05:01:17.884228+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-12T05:03:23.192378+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "能否判断谁获胜"}
+{"time": "2026-09-12T05:03:26.367693+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "能否判断谁获胜"}
+{"time": "2026-09-12T05:03:28.607892+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "能否判断谁获胜"}
+{"time": "2026-09-12T05:03:40.795836+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "你是什么模型"}
+{"time": "2026-09-12T05:03:42.740036+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "你是什么模型"}
+{"time": "2026-09-12T05:09:49.422340+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-12T05:09:51.713523+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-12T05:09:54.352507+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-12T05:09:55.958293+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-12T05:10:02.552954+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-12T05:14:19.209501+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "第二回合有哪些关键事件"}
+{"time": "2026-09-12T05:14:22.001894+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "第二回合有哪些关键事件"}
+{"time": "2026-09-12T05:14:29.903021+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "能否判断谁获胜"}
+{"time": "2026-09-12T05:14:32.175433+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "能否判断谁获胜"}
+{"time": "2026-09-12T05:14:38.785982+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员B"}
+{"time": "2026-09-12T05:14:52.651593+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员B"}
+{"time": "2026-09-12T05:15:17.257209+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "第三回合有哪些关键事件"}
+{"time": "2026-09-12T05:15:28.643000+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "第3回合有哪些关键事件"}
+{"time": "2026-09-12T05:16:19.940045+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "第6回合有哪些关键事件"}
+{"time": "2026-09-12T05:16:24.045716+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "第6回合有哪些关键事件"}
+{"time": "2026-09-12T05:22:30.525991+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "第二回合有哪些关键事件"}
+{"time": "2026-09-12T05:22:33.320052+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "第二回合有哪些关键事件"}
+{"time": "2026-09-12T05:22:35.669213+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "第二回合有哪些关键事件"}
+{"time": "2026-09-12T05:22:37.811273+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "第二回合有哪些关键事件"}
+{"time": "2026-09-12T05:22:45.393340+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-12T05:22:47.396367+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-12T05:22:49.748239+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-12T06:21:52.738173+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析运动员A"}
+{"time": "2026-09-12T06:22:46.875594+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析羽毛球轨迹"}
+{"time": "2026-09-12T06:22:57.525080+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析羽毛球轨迹"}
+{"time": "2026-09-12T06:23:11.261911+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析羽毛球轨迹"}
+{"time": "2026-09-12T06:23:33.599872+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析羽毛球轨迹"}
+{"time": "2026-09-12T06:23:39.079806+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析羽毛球轨迹"}
+{"time": "2026-09-12T06:23:42.264323+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析羽毛球轨迹"}
+{"time": "2026-09-12T06:23:47.461965+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析羽毛球轨迹"}
+{"time": "2026-09-12T06:23:53.533150+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析羽毛球轨迹"}
+{"time": "2026-09-12T06:24:01.844650+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析羽毛球轨迹"}
+{"time": "2026-09-12T06:24:05.102904+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析羽毛球轨迹"}
+{"time": "2026-09-12T06:24:12.879943+00:00", "event": "qwen_request", "model": "qwen3-vl:8b-instruct", "question": "分析羽毛球轨迹"}
