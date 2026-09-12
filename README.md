@@ -1,460 +1,176 @@
-# 羽毛球运动分析与轨迹可视化系统
+# 羽毛球轨迹分析平台
 
-本项目是一个面向羽毛球比赛视频的离线分析系统，用于从普通摄像机视频中提取羽毛球轨迹和运动员移动轨迹，并生成带有可视化统计信息的分析视频。
+一个面向比赛视频的离线计算机视觉与分析平台。系统从普通摄像机视频中检测羽毛球和运动员，进行球场坐标标定、移动轨迹分析、回合事件识别，并输出 CSV、JSON、Markdown 报告和可视化视频。
 
-系统将羽毛球检测、运动员检测与跟踪、球场坐标标定、运动统计和视频渲染组合成一条完整流水线，适合用于：
+项目同时提供 React/Vite 控制台和 FastAPI 服务：用户可以上传视频、查看流水线进度、读取分析结果，并通过本地 Qwen3-VL Agent 对结果进行问答。
 
-- 羽毛球比赛视频技术复盘
-- 运动员移动范围、速度和回位行为分析
-- 羽毛球轨迹检测与修复实验
-- 计算机视觉、目标跟踪和 AI+VR 研究原型
+## 功能
 
-> 当前版本是离线处理原型，不是实时分析系统。样例视频、模型权重和输出视频等大二进制文件通过 Git LFS 管理。
-
-## 功能概览
-
-### 羽毛球轨迹检测
-
-使用 TrackNetV3 对连续视频帧进行羽毛球检测：
-
-- 输入连续 8 帧，而不是单张图片
-- 使用 U-Net 风格网络输出羽毛球热力图
-- 对热力图进行二值化和连通域分析，得到每帧球心坐标
-- 使用 InpaintNet 对被遮挡或短暂丢失的轨迹进行补全
-- 使用时序集成减少逐帧检测抖动
-- 输出 Frame, X, Y, Visibility 格式的 CSV 文件
-
-### 运动员检测与多目标跟踪
-
-使用 YOLOv8-Pose 和 ByteTrack 对画面中的运动员进行检测和跟踪：
-
-- 检测人员并提取 COCO 17 点人体关键点
-- 使用 ByteTrack 在视频帧之间保持稳定的 track_id
-- 以边界框底边中心估计运动员脚点
-- 通过球场 ROI、球场四边形和顶部静态目标过滤干扰
-- 根据球网位置和历史轨迹将运动员分为近端和远端
-- 检测缺失时使用光流或上一有效位置进行短时补偿
-- 对异常跳变进行断线和轨迹质量控制
-
-### 球场坐标映射与运动统计
-
-通过单应性变换将视频中的梯形球场映射到真实尺寸的矩形球场：
-
-- 标准羽毛球场尺寸：宽 6.1 m，长 13.4 m
-- 将像素坐标转换为球场米制坐标
-- 计算运动员速度、距离和加速度
-- 统计前场、中场、后场活动区域占比
-- 识别回合开始和结束
-- 计算回位计时等动态指标
-
-### 分析视频渲染
-
-最终视频可以包含：
-
-- 近端和远端运动员脚下轨迹
-- 运动员骨架关键点
-- 羽毛球轨迹和球场小地图
-- 回合状态、距离、速度等统计面板
-- 速度趋势、加速度和回位计时组件
-- 中文标题和状态文字
-
-### 浏览器轨迹标注工具
-
-tools/annotate_trajectory.html 是一个无需后端的本地浏览器标注工具，可以：
-
-- 加载本地比赛视频并逐帧查看
-- 标注远端脚点、近端脚点和羽毛球
-- 标注球场四角，顺序为左上、右上、右下、左下
-- 复制上一帧标注
-- 对空帧进行插值
-- 导出 CSV 或 JSON
+- **羽毛球检测**：TrackNetV3 使用连续帧生成热力图，输出每帧球心坐标和可见性。
+- **球员检测与跟踪**：YOLOv8-Pose 检测人体关键点，ByteTrack 关联跨帧轨迹，并区分近端和远端球员。
+- **球场坐标映射**：通过四个球场角点进行单应性变换，将像素坐标转换为 6.1 m x 13.4 m 的真实球场坐标。
+- **运动统计**：计算速度、距离、加速度、活动区域、回合和回位等指标，并生成质量报告。
+- **视频渲染**：叠加球和球员轨迹、球场小地图、统计面板和回合状态。
+- **Agent 问答**：根据分析 JSON、事件和证据文件回答自然语言问题，并返回证据来源。
+- **浏览器标注**：`tools/annotate_trajectory.html` 可在本地逐帧标注球场、球员和羽毛球坐标。
 
 ## 系统架构
 
-~~~text
-                         +-------------------------------+
-                         | TrackNetV3                    |
-                         | 8帧 -> 热力图 -> 球心坐标       |
-                         +---------------+---------------+
-                                         |
-41.MP4 ---------------------------------+----> 41_ball.csv
-  |
-  +------------------------> YOLOv8-Pose + ByteTrack
-                            运动员检测与跨帧跟踪
-                                         |
-                            +------------v------------------+
-                            | Homography + Analytics         |
-                            | 坐标映射、统计、视频渲染         |
-                            +------------+------------------+
-                                         |
-                                         v
-                              output_final/41_analysis.mp4
-~~~
+```text
+视频上传 -> FastAPI 任务服务 -> TrackNetV3 -> 羽毛球 CSV
+                         |      -> YOLOv8-Pose/ByteTrack -> 球员轨迹
+                         |      -> Homography -> 米制坐标
+                         |      -> Analytics/Agent -> JSON、报告、证据
+                         |      -> Overlay Renderer -> 分析视频
+                         +---- React/Vite 控制台
+```
 
-羽毛球和运动员使用不同的检测策略：羽毛球尺寸小、速度快且容易运动模糊，因此使用时序热力图模型；运动员目标较大且具有稳定的空间结构，因此使用目标检测和多目标跟踪。
-
-## 数据流
-
-~~~text
-原始比赛视频
-    |
-    +-- TrackNetV3 推理
-    |      +-- 背景估计
-    |      +-- 8 帧序列输入
-    |      +-- 热力图检测
-    |      +-- 坐标提取
-    |      +-- InpaintNet 轨迹补全
-    |
-    +--> 羽毛球坐标 CSV
-    |
-    +-- overlay_player_analytics.py
-           +-- YOLOv8-Pose 检测运动员
-           +-- ByteTrack 关联跨帧目标
-           +-- 计算运动员脚点
-           +-- 过滤球场外目标
-           +-- 近端/远端身份绑定
-           +-- 光流和历史位置补偿
-           +-- 单应性变换到米制球场坐标
-           +-- 计算速度、距离和回合统计
-           +-- 渲染最终分析视频
-~~~
+一次完整任务依次执行 `validate_video`、`detect_ball`、`track_players`、`export_coordinates`、`generate_analysis`、`render_video` 和 `ready` 阶段。阶段状态和产物会写入任务目录，支持前端轮询和失败重试。
 
 ## 目录结构
 
-~~~text
-.
-├── 41.MP4                              # 原始样例比赛视频
-├── docs/
-│   └── 系统实现解析.md                   # 算法、历史修复和扩展方向说明
-├── external/TrackNetV3/                 # TrackNetV3 源码、数据和模型
-│   ├── predict.py                       # 羽毛球轨迹推理入口
-│   ├── model.py                         # TrackNet 和 InpaintNet 定义
-│   ├── train.py                         # 训练入口
-│   ├── test.py                          # 测试和评估入口
-│   ├── preprocess.py                    # 数据预处理
-│   ├── generate_mask_data.py             # 生成修复模块训练数据
-│   ├── ckpts/TrackNet_best.pt            # TrackNet 预训练权重
-│   ├── ckpts/InpaintNet_best.pt          # InpaintNet 预训练权重
-│   └── corrected_test_label/             # 修正后的测试标注
-├── pipeline_code/
-│   ├── overlay_player_analytics.py      # 跟踪、统计和视频渲染
-│   ├── run_generate_video.sh             # 全精度生成脚本
-│   └── run_generate_video_fast.sh        # 快速生成脚本
-├── output_tracknet/
-│   ├── 41_ball.csv                       # 羽毛球轨迹坐标
-│   └── 41.mp4                            # TrackNetV3 处理后的视频
-├── output_final/
-│   ├── 41_analysis.mp4                  # 最终分析视频
-│   └── 41_far_fix_smoke.mp4             # 远端轨迹修复验证视频
-└── tools/
-    ├── annotate_trajectory.html          # 浏览器轨迹标注工具
-    └── README_annotation.md              # 标注工具说明
-~~~
+```text
+backend/                  FastAPI 服务、任务管理和分析流水线
+  main.py                 应用入口
+  config.py               环境变量和模型路径配置
+  video_pipeline.py       可恢复的分阶段视频处理流程
+  api/                    upload/analyze/status/results/retry 接口
+  storage/                上传文件、任务工作区和分析结果
+frontend/                 React + Vite 控制台
+external/TrackNetV3/      TrackNetV3 源码和推理脚本
+agent/                    查询分类、规划、证据校验和 Qwen 客户端
+agent_analysis/           轨迹特征、回合、事件和质量报告
+pipeline_code/            坐标导出和分析视频渲染脚本
+tools/                    标注、预检和辅助脚本
+output_coordinates/       示例坐标和统计结果
+output_tracknet/          TrackNet CSV 结果
+output_final/             示例分析视频
+```
 
-## 环境要求
+## 环境要求与安装
 
-项目当前主要在 Apple Silicon macOS 环境下开发和验证，推荐：
+- Python 3.9+
+- Node.js 18+ 和 npm
+- PyTorch、OpenCV、NumPy、Pandas、Ultralytics
+- 可选 CUDA、Apple MPS、本地 Ollama 与 `qwen3-vl:8b-instruct`
+- Git LFS（用于视频和模型权重）
 
-- macOS，Apple Silicon
-- Python 3.9 或更高版本
-- PyTorch
-- OpenCV
-- NumPy
-- Pillow
-- Ultralytics
-- pandas
-- Git LFS
-- 可选：Apple MPS GPU
-
-TrackNetV3 原始依赖位于 external/TrackNetV3/requirements.txt。运动员分析脚本还需要 ultralytics。建议在独立虚拟环境中安装兼容的 Python、PyTorch 和 Ultralytics 版本。
-
-## 安装依赖
-
-~~~bash
-cd /Users/zhujinpeng/Desktop/yumaoqiu
-python3 -m venv .venv
+```bash
+python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
+python -m pip install -r backend/requirements.txt
 python -m pip install -r external/TrackNetV3/requirements.txt
-python -m pip install ultralytics opencv-python numpy pandas pillow
-~~~
+python -m pip install ultralytics
+cd frontend && npm install
+```
 
-如果使用 Apple Silicon 的 MPS 加速，请按照 PyTorch 官方说明安装适用于当前系统的 PyTorch，并检查：
+## 启动 Web 控制台
 
-~~~bash
-python -c "import torch; print(torch.backends.mps.is_available())"
-~~~
+在项目根目录启动后端：
 
-首次克隆后，使用 Git LFS 下载视频和模型权重：
+```bash
+uvicorn backend.main:app --host 0.0.0.0 --port 8000
+```
 
-~~~bash
-git lfs install
-git lfs pull
-~~~
+另开终端启动前端：
 
-如果只需要阅读代码，不需要运行样例视频，可以不下载 LFS 大文件。
+```bash
+cd frontend
+npm run dev
+```
 
-## 快速开始
+浏览器打开 `http://localhost:5173`。前端 API 地址可在 `frontend/.env` 中通过 `VITE_API_URL` 设置，默认使用 `http://localhost:8000`。
 
-完整分析流程分为两个阶段。
+## 直接运行流水线
 
-### 阶段一：生成羽毛球轨迹
+准备输入视频、TrackNet 权重、`yolov8s-pose.pt` 和当前视频的球场四角点（左上、右上、右下、左下）。
 
-从原始视频中提取羽毛球坐标：
+生成羽毛球轨迹：
 
-~~~bash
-cd /Users/zhujinpeng/Desktop/yumaoqiu/external/TrackNetV3
+```bash
+cd external/TrackNetV3
 python predict.py \
   --video_file ../../41.MP4 \
   --tracknet_file ckpts/TrackNet_best.pt \
   --inpaintnet_file ckpts/InpaintNet_best.pt \
   --save_dir ../../output_tracknet \
   --output_video
-~~~
+```
 
-主要输出：
+渲染完整分析视频：
 
-- output_tracknet/41_ball.csv
-- output_tracknet/41.mp4
+```bash
+BADMINTON_COURT_POINTS=352,232,613,232,719,525,244,525 \
+BADMINTON_DEVICE=cpu \
+pipeline_code/run_generate_video.sh
+```
 
-对于较大视频，可以增加 --large_video，并用 --max_sample_num 或 --video_range 限制背景估计范围。
+快速模式：
 
-~~~bash
-python predict.py \
-  --video_file ../../41.MP4 \
-  --tracknet_file ckpts/TrackNet_best.pt \
-  --inpaintnet_file ckpts/InpaintNet_best.pt \
-  --save_dir ../../output_tracknet \
-  --large_video \
-  --max_sample_num 1800
-~~~
+```bash
+BADMINTON_COURT_POINTS=352,232,613,232,719,525,244,525 \
+pipeline_code/run_generate_video_fast.sh
+```
 
-### 阶段二：生成运动分析视频
+## 常用配置
 
-项目提供了已经配置好样例路径和球场坐标的脚本：
-
-~~~bash
-cd /Users/zhujinpeng/Desktop/yumaoqiu
-./pipeline_code/run_generate_video.sh
-~~~
-
-默认配置：
-
-- 输入视频：output_tracknet/41.mp4
-- 羽毛球 CSV：output_tracknet/41_ball.csv
-- 输出视频：output_final/41_analysis.mp4
-- 检测设备：mps
-- 姿态模型：外部路径中的 yolov8s-pose.pt
-- 每帧检测：detect_interval 1
-- 不绘制骨架：no_draw_pose
-
-快速模式会降低姿态检测频率和输入分辨率：
-
-~~~bash
-./pipeline_code/run_generate_video_fast.sh
-~~~
-
-快速模式适合调试和流程验证，最终精度优先时建议使用全精度脚本。
-
-## 直接运行运动分析脚本
-
-~~~bash
-python pipeline_code/overlay_player_analytics.py \
-  --video_path output_tracknet/41.mp4 \
-  --output_path output_final/custom_analysis.mp4 \
-  --ball_csv output_tracknet/41_ball.csv \
-  --yolo_model /path/to/yolov8s-pose.pt \
-  --tracker_cfg bytetrack.yaml \
-  --court_points "352,232,613,232,719,525,244,525" \
-  --device mps \
-  --detect_interval 1 \
-  --no_draw_pose
-~~~
-
-court_points 的顺序必须是：
-
-~~~text
-左上 x1,y1, 右上 x2,y2, 右下 x3,y3, 左下 x4,y4
-~~~
-
-如果没有可靠的球场坐标，可以启用交互式选点：
-
-~~~bash
-python pipeline_code/overlay_player_analytics.py \
-  --video_path output_tracknet/41.mp4 \
-  --output_path output_final/custom_analysis.mp4 \
-  --ball_csv output_tracknet/41_ball.csv \
-  --yolo_model /path/to/yolov8s-pose.pt \
-  --select_court_points
-~~~
-
-## 重要参数
-
-### TrackNetV3 predict.py
-
-| 参数 | 默认值 | 说明 |
+| 变量 | 默认值 | 说明 |
 | --- | --- | --- |
-| --video_file | 无 | 输入视频路径 |
-| --tracknet_file | 无 | TrackNet 权重路径 |
-| --inpaintnet_file | 空 | InpaintNet 权重路径 |
-| --batch_size | 16 | 推理批大小 |
-| --eval_mode | weight | 可选 nonoverlap、average、weight |
-| --save_dir | pred_result | 输出目录 |
-| --large_video | 关闭 | 使用大视频迭代数据集 |
-| --output_video | 关闭 | 输出带轨迹的视频 |
-| --traj_len | 8 | 视频中显示的轨迹长度 |
+| `BADMINTON_DEVICE` | `auto` | `cpu`、`cuda`、`mps` 或 `auto` |
+| `BADMINTON_COURT_POINTS` | 空 | 八个数字 `x1,y1,...,x4,y4` |
+| `BADMINTON_TRACKNET_MODEL` | `external/TrackNetV3/ckpts/TrackNet_best.pt` | TrackNet 权重 |
+| `BADMINTON_INPAINT_MODEL` | `.../InpaintNet_best.pt` | 轨迹补全权重 |
+| `BADMINTON_YOLO_MODEL` | `yolov8s-pose.pt` | YOLO-Pose 权重 |
+| `BADMINTON_RENDER_VIDEO` | `1` | 设为 `0` 跳过视频渲染 |
+| `BADMINTON_STORAGE_ROOT` | `backend/storage` | 任务和上传文件根目录 |
+| `BADMINTON_QWEN_MODEL` | `qwen3-vl:8b-instruct` | Ollama 模型名称 |
+| `OLLAMA_BASE_URL` | `http://127.0.0.1:11434` | Ollama 服务地址 |
+| `BADMINTON_MAX_UPLOAD_MB` | `512` | 单个视频大小上限 |
 
-### overlay_player_analytics.py
+## HTTP API
 
-| 参数 | 默认值 | 说明 |
+后端默认地址为 `http://localhost:8000`，访问 `/docs` 可查看 OpenAPI 文档。
+
+| 方法 | 路径 | 作用 |
 | --- | --- | --- |
-| --video_path | 脚本内默认路径 | 输入视频 |
-| --output_path | 脚本内默认路径 | 输出分析视频 |
-| --ball_csv | 自动推断 | 羽毛球坐标 CSV |
-| --yolo_model | yolov8s-pose.pt | YOLO 姿态模型 |
-| --tracker_cfg | bytetrack.yaml | ByteTrack 配置 |
-| --device | 自动选择 | mps、cuda 或 cpu |
-| --imgsz | 960 | YOLO 输入分辨率 |
-| --detect_interval | 1 | 每 N 帧检测一次 |
-| --conf_thres | 0.18 | 人员检测置信度阈值 |
-| --court_points | 空 | 球场四角坐标 |
-| --side_band_px | 45 | 网线附近近端/远端分配带宽 |
-| --trail_len | 50 | 主画面轨迹长度 |
-| --minimap_trail_len | 120 | 小地图轨迹长度 |
-| --trail_jump_split_px | 95 | 异常跳变断开阈值 |
-| --no_draw_pose | 关闭 | 关闭骨架绘制 |
-| --no_draw_bottom_widgets | 关闭 | 关闭底部统计组件 |
-| --profile | 关闭 | 打印阶段耗时 |
+| `GET` | `/health` | 健康检查 |
+| `POST` | `/api/upload` | 上传视频并创建任务 |
+| `POST` | `/api/analyze` | 提交问题并启动 Agent 分析 |
+| `GET` | `/api/status/{task_id}` | 查询任务阶段和进度 |
+| `GET` | `/api/results/{task_id}` | 获取报告、指标和证据 |
+| `POST` | `/api/retry/{task_id}` | 重试失败任务 |
 
-远端球员容易受到透视、遮挡和网前动作影响。远端精度优先时建议保持 detect_interval 1，并根据视频重新标定 court_points。
+典型流程是上传视频取得 `task_id`，轮询状态直到 `ready`，再读取结果。问答请求体为 `{ "task_id": "...", "question": "..." }`。
 
-## 羽毛球轨迹 CSV 格式
+## 输出文件
 
-典型输出文件为 output_tracknet/41_ball.csv：
+任务产物保存在 `backend/storage/tasks/<task_id>/workspace/`：
 
-~~~csv
-Frame,X,Y,Visibility
-0,0,0,0
-1,512,236,1
-2,518,241,1
-~~~
+- `tracknet/*_ball.csv`：帧号、球心坐标和可见性
+- `*_coordinates.csv`：球员和羽毛球逐帧坐标
+- `analysis/analysis.json`：综合指标和分析结果
+- `analysis/event_analysis.json`：击球、落点等事件
+- `analysis/rally_analysis.json`：回合统计
+- `analysis/important_events.json`：关键事件摘要
+- `analysis/quality_report.json`：输入、轨迹和标定质量检查
+- `*_analysis.mp4`：可选的最终叠加视频
 
-- Frame：视频帧编号
-- X、Y：羽毛球在原始视频坐标系中的像素位置
-- Visibility：是否检测到羽毛球，1 表示可见，0 表示未检测到或不可见
+## 测试与预检
 
-渲染阶段会使用该 CSV 进行小地图显示、回合切分和球轨迹分析。
-
-## 标注工具使用
-
-直接在浏览器中打开 tools/annotate_trajectory.html，点击“打开视频”选择本地视频即可。
-
-推荐流程：
-
-1. 将帧率设置为源视频真实帧率。
-2. 标注球场四角，顺序为左上、右上、右下、左下。
-3. 重点检查远端运动员脚点，轨迹漂移处可以每隔 3 至 5 帧补标一次。
-4. 需要训练或评估模型时，再补充羽毛球和近端脚点。
-5. 需要连续轨迹时，勾选导出时自动插值补齐空帧。
-
-导出的标注字段为：
-
-~~~text
-Frame,
-Ball_X,Ball_Y,Ball_Visibility,
-Far_X,Far_Y,Far_Visibility,
-Near_X,Near_Y,Near_Visibility,
-Court_Points
-~~~
-
-## 模型和外部文件
-
-### TrackNetV3
-
-external/TrackNetV3/ 保留了 TrackNetV3 源码、说明、测试标注和权重：
-
-- [TrackNetV3 原始项目](https://github.com/qaz812345/TrackNetV3)
-- [TrackNetV3 论文](https://dl.acm.org/doi/10.1145/3595916.3626370)
-
-使用外部代码和权重时，请遵守 external/TrackNetV3/LICENSE 与 external/TrackNetV3/LICENSE 3。
-
-### YOLOv8-Pose
-
-运动员分析脚本需要 yolov8s-pose.pt。当前 Shell 脚本引用开发机器上的外部路径：
-
-~~~text
-/Users/zhujinpeng/Library/Mobile Documents/com~apple~CloudDocs/pipeline_repro_bundle/weights/yolov8s-pose.pt
-~~~
-
-换到其他机器运行时，需要准备兼容的 YOLOv8-Pose 权重，并修改 yolo_model 路径。还要确保 bytetrack.yaml 可以被 Ultralytics 找到。
+```bash
+pytest backend -q
+python tools/preflight_check.py
+```
 
 ## 已知限制
 
-- 当前流程为离线视频处理，不能保证实时速度。
-- 运动员位置是二维像素和二维球场坐标，不是真实三维姿态。
-- 单摄像机视角存在遮挡、透视和身份切换问题。
-- 球场四角坐标对视角敏感，标定错误会影响速度、距离和区域统计。
-- mps 只适用于支持 Apple MPS 的环境；其他机器应使用 cpu 或 cuda。
-- YOLO 权重路径依赖本机环境，不能假设其他机器具有相同路径。
-- 仓库包含样例视频、模型和生成结果，克隆和拉取 LFS 对象需要较多磁盘空间和网络流量。
-- 仓库保留了部分实验文件、重复命名文件和 Python 缓存，这是当前实验资料的一部分。
+- 当前是离线分析原型，不是实时推理服务。
+- 球场角点必须对应当前视频，不能直接复用其他视频标定。
+- 没有 InpaintNet 时仍可生成结果，但质量报告会标记降级状态。
+- 本地 Qwen 问答需要 Ollama 服务和对应视觉模型。
+- 视频和模型体积较大，克隆后需要安装 Git LFS 并执行 `git lfs pull`。
 
-## 常见问题
+## 许可与第三方组件
 
-### 找不到 YOLO 模型
-
-~~~bash
-ls -lh /path/to/yolov8s-pose.pt
-~~~
-
-确认文件存在后，使用绝对路径传入 yolo_model。
-
-### 提示没有提供球场四角
-
-传入 8 个数字：
-
-~~~bash
---court_points "x1,y1,x2,y2,x3,y3,x4,y4"
-~~~
-
-或者启用 select_court_points 进行交互式选点。
-
-### 远端运动员轨迹颜色或身份不正确
-
-优先检查球场点顺序、球网位置、side_band_px、detect_interval，以及运动员脚点是否落在球场四边形内。
-
-### Git LFS 文件没有下载
-
-~~~bash
-git lfs install
-git lfs pull
-~~~
-
-## 研究与扩展方向
-
-当前项目已经具备向 AI+VR 扩展的部分基础：
-
-- 单应性变换提供真实米制球场坐标
-- 运动员脚点可以作为二维战术位置输入
-- COCO 17 点人体关键点可以作为动作捕捉起点
-- 小地图提供二维俯视战术复盘原型
-
-进一步扩展可以从以下方向开始：
-
-1. 使用单目深度估计或人体先验补充三维位置和深度。
-2. 使用多摄像机融合降低遮挡和透视歧义。
-3. 将二维关键点映射到虚拟角色骨骼，构建动作回放原型。
-4. 使用 CoreML、TensorRT 或模型量化降低推理延迟。
-5. 通过人工标注数据评估远端脚点修复和轨迹质量。
-
-## 许可证与引用
-
-本次视频轨迹分析的完整交付说明、最终文件索引、指标表格和复现命令见：[docs/轨迹分析交付文档.md](docs/轨迹分析交付文档.md)。
-
-本项目包含外部 TrackNetV3 代码和相关文件，请同时遵守其许可证文件。使用 TrackNetV3 时建议引用其原始论文和项目。
-
-如果基于本项目进行研究或二次开发，请在论文、报告或项目说明中注明：
-
-- 使用 TrackNetV3 进行羽毛球检测和轨迹修复
-- 使用 YOLOv8-Pose 与 ByteTrack 进行运动员检测和跟踪
-- 使用单应性变换进行球场坐标映射
+`external/TrackNetV3` 保留其原始许可证和说明。YOLO、PyTorch、FastAPI、React、Vite 及其他依赖遵循各自上游许可证。使用前请确认比赛视频、训练数据和模型权重的授权范围。
